@@ -10,7 +10,18 @@ export function Topbar() {
         >
           BraneBridge
         </Link>
-        <h1 className="underline">home</h1>
+        <Link href="/" className="underline">
+          Services
+        </Link>
+        <Link href="/" className="underline">
+          Cases
+        </Link>
+        <Link href="/" className="underline">
+          About
+        </Link>
+        <Link href="/" className="underline">
+          Contact
+        </Link>
       </div>
     </div>
   );

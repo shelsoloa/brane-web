@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import { Topbar } from "@/components/navigation";
+import { Topbar } from "@/components/topbar";
 import { anka_coder } from "@/styles/fonts";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={anka_coder.className}>
-      <body className="p-8">
+      <body>
         <Topbar />
         {children}
       </body>
