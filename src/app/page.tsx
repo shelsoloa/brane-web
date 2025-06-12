@@ -28,11 +28,22 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function Hero() {
   return (
-    <Section className="bg-white min-h-[50vh] flex items-center px-8">
-      <p className="w-1/2 text-left">
-        The power of AI, Data Engineering, & Cloud Computing Combined.
-      </p>
-    </Section>
+    <div className="h-[50vh]">
+      <div className="w-full h-full flex items-center justify-left relative px-8">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <p className="w-1/2 text-left text-lg text-black font-bold">
+          The power of AI, Data Engineering, & Cloud Computing Combined.
+        </p>
+      </div>
+    </div>
   );
 }
 
