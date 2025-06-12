@@ -38,7 +38,7 @@ function WhoAreWe() {
         We are your partner in Data, Cloud, and AI Product Development
       </h1>
       <Button className="self-end text-black" variant="outline">
-        Contact Us
+        <a href="mailto:contact@branebridge.com">Contact Us</a>
       </Button>
     </Section>
   );
