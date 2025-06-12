@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
     <div className="mt-4">
@@ -31,11 +33,13 @@ function Hero() {
 
 function WhoAreWe() {
   return (
-    <Section className="bg-black text-white p-8">
+    <Section className="bg-black text-white p-8 flex gap-4">
       <h1 className="text-4xl font-bold uppercase">
         We are your partner in Data, Cloud, and AI Product Development
       </h1>
-      <p className="text-sm">Toronto-based</p>
+      <Button className="self-end text-black" variant="outline">
+        Contact Us
+      </Button>
     </Section>
   );
 }
