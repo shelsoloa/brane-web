@@ -95,17 +95,29 @@ function Services() {
             Product Development
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="agents">
+        <TabsContent value="agents" className="px-8">
           <p>AI Agents</p>
+          <Button className="text-black mt-4" variant="outline">
+            <a href="mailto:contact@branebridge.com">Learn More</a>
+          </Button>
         </TabsContent>
-        <TabsContent value="rag">
+        <TabsContent value="rag" className="px-8">
           <p>AI RAG Pipelines</p>
+          <Button className="text-black mt-4" variant="outline">
+            <a href="mailto:contact@branebridge.com">Learn More</a>
+          </Button>
         </TabsContent>
-        <TabsContent value="cloud">
+        <TabsContent value="cloud" className="px-8">
           <p>Cloud Engineering</p>
+          <Button className="text-black mt-4" variant="outline">
+            <a href="mailto:contact@branebridge.com">Learn More</a>
+          </Button>
         </TabsContent>
-        <TabsContent value="product">
+        <TabsContent value="product" className="px-8">
           <p>Product Development</p>
+          <Button className="text-black mt-4" variant="outline">
+            <a href="mailto:contact@branebridge.com">Learn More</a>
+          </Button>
         </TabsContent>
       </Tabs>
     </Section>
