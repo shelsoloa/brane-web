@@ -1,26 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Topbar() {
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex items-center gap-4">
-        <Link
-          href="/"
-          className="border-2 font-bold px-4 py-1 border-black hover:bg-black hover:text-white transition-all duration-300"
-        >
-          BraneBridge
+    <div className="flex items-center justify-between bg-secondary p-8">
+      <Link href="/" className="hover:opacity-75 transition-all duration-300">
+        <Image
+          src="/images/branebridge-logo-green.svg"
+          alt="BraneBridge logo"
+          width={200}
+          height={200}
+        />
+      </Link>
+
+      <div className="flex items-center w-1/2 justify-between text-primary-foreground">
+        <Link href="/" className="hover:text-primary">
+          SERVICES
         </Link>
-        <Link href="/" className="underline">
-          Services
+        <Link href="/" className="hover:text-primary">
+          CASES
         </Link>
-        <Link href="/" className="underline">
-          Cases
+        <Link href="/" className="hover:text-primary">
+          ABOUT
         </Link>
-        <Link href="/" className="underline">
-          About
-        </Link>
-        <Link href="/" className="underline">
-          Contact
+        <Link href="/" className="hover:text-primary">
+          CONTACT
         </Link>
       </div>
     </div>

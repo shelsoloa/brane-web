@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
-    <div className="mt-4">
+    <div>
       <Hero />
       <WhoAreWe />
       <Services />
@@ -39,8 +39,9 @@ function Hero() {
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <p className="w-1/2 text-left text-lg text-black font-bold">
-          The power of AI, Data Engineering, & Cloud Computing Combined.
+        <p className="w-1/2 text-left text-xl text-primary-foreground font-bold">
+          Bring the power of AI, Data Engineering, & Cloud Computing to your
+          logistics business.
         </p>
       </div>
     </div>
