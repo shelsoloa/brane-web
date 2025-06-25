@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,7 +9,9 @@ export default function Home() {
       <Hero />
       <WhoAreWe />
       <Services />
-      <Cases />
+      <Industry />
+      <AboutUs />
+      <Contact />
     </div>
   );
 }
@@ -15,11 +19,17 @@ export default function Home() {
 function Section({
   children,
   className,
+  id,
 }: {
   children: React.ReactNode;
+  id?: string;
   className?: string;
 }) {
-  return <div className={`p-8 ${className}`}>{children}</div>;
+  return (
+    <div className={`p-8 ${className}`} id={id}>
+      {children}
+    </div>
+  );
 }
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -28,7 +38,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function Hero() {
   return (
-    <div className="h-[50vh]">
+    <div className="h-[50vh]" id="hero">
       <div className="w-full h-full flex items-center justify-left relative px-8">
         <video
           autoPlay
@@ -50,7 +60,7 @@ function Hero() {
 
 function WhoAreWe() {
   return (
-    <Section className="bg-black text-white p-8 flex gap-4">
+    <Section className="bg-black text-white p-8 flex gap-4" id="agency-about">
       <SectionTitle>
         We are your partner in Data, Cloud, and AI Product Development
       </SectionTitle>
@@ -63,9 +73,34 @@ function WhoAreWe() {
 
 function Services() {
   return (
-    <Section className="bg-white">
-      <SectionTitle>Services</SectionTitle>
+    <Section className="bg-white" id="services">
+      <SectionTitle>Solutions & Services</SectionTitle>
 
+      <ul className="flex flex-col gap-4">
+        <li>
+          <h2>AI Agents for Load Matching & Dispatching</h2>
+          <p>
+            We build AI agents that can automate your business processes and
+            improve your efficiency.
+          </p>
+        </li>
+        <li>
+          <h2>Custom Portal / Workflow Dashboard MVP</h2>
+          <p>
+            We build a custom portal / workflow dashboard MVP for your business.
+          </p>
+        </li>
+        <li>
+          <h2>AI RAG Pipelines for Information Retrieval</h2>
+          <p>
+            We build AI RAG pipelines that can automate your business processes
+            and improve your efficiency. We can also build a custom RAG pipeline
+            for your business.
+          </p>
+        </li>
+      </ul>
+
+      {/* 
       <Tabs
         defaultValue="agents"
         className="border-2 rounded-lg border-black pb-4"
@@ -120,15 +155,115 @@ function Services() {
             <a href="mailto:contact@branebridge.com">Learn More</a>
           </Button>
         </TabsContent>
-      </Tabs>
+      </Tabs> */}
     </Section>
   );
 }
 
-function Cases() {
+function Industry() {
   return (
-    <Section className="bg-black text-white">
-      <p>Cases</p>
+    <Section className="bg-black text-white" id="industry">
+      <SectionTitle>Who do we serve?</SectionTitle>
+
+      <p>
+        We are focused on serving the Canadian{" "}
+        <span className="underline">Logistics</span> industry.
+      </p>
+    </Section>
+  );
+}
+function AboutUs() {
+  return (
+    <Section className="" id="team">
+      <SectionTitle>Who are we?</SectionTitle>
+      <p>
+        We are a team of experienced Canadian engineers and product managers who
+        are passionate about building products that helps the Canadian{" "}
+        <span className="underline">Logistics</span> industry grow.
+      </p>
+
+      <br />
+
+      <h2 className="text-2xl font-bold">About our Founder</h2>
+      <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="flex flex-col items-center gap-4">
+          <Image
+            src="/images/sheldon-headshot.jpg"
+            alt="Founder"
+            width={300}
+            height={300}
+            className="rounded-full"
+          />
+          <div className="flex flex-col gap-1 text-center">
+            <a
+              className="text-sm underline"
+              href="mailto:sheldon@branebridge.com"
+            >
+              sheldon@branebridge.com
+            </a>
+            <Link
+              className="text-sm underline"
+              href="https://www.linkedin.com/in/shelsoloa/"
+            >
+              LinkedIn
+            </Link>
+          </div>
+        </div>
+        <div className="col-span-2">
+          <h3 className="text-lg font-bold">Sheldon Soloa</h3>
+          <p className="text-lg">Founder & CEO, BraneBridge</p>
+          <p className="text-sm">
+            Sheldon is a Hamilton-born, Toronto-based software engineer and
+            technical leader with over a decade of experience architecting
+            cloud-native systems and delivering scalable software solutions. He
+            has led development teams across early-stage startups and high-scale
+            environments, including OtO Inc., where he served as Lead Software
+            Engineer through to acquisition.
+            <br />
+            <br />
+            Prior to founding BraneBridge, Sheldon held engineering and
+            leadership roles at OtO Inc., Yelp, and GABZEBO Inc., specializing
+            in cloud infrastructure, AI-powered backend services, and full-stack
+            product development. His work consistently bridges deep technical
+            execution with real-world business outcomes; particularly for SMBs
+            in traditional sectors.
+            <br />
+            <br />
+            Through BraneBridge, he brings this experience to underserved
+            industries like logistics, manufacturing, and construction, helping
+            them modernize operations through practical AI integration and cloud
+            optimization.
+          </p>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+function Contact() {
+  return (
+    <Section className="bg-accent text-white" id="contact">
+      <SectionTitle>Contact Us</SectionTitle>
+
+      <p>Reach out with any questions or inquiries.</p>
+
+      <form
+        className="flex flex-col gap-4"
+        action="mailto:contact@branebridge.com"
+      >
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Company" />
+        <textarea placeholder="Message" />
+        <button type="submit">Send</button>
+      </form>
+
+      <div className="flex gap-4">
+        <p>
+          Email:{" "}
+          <a href="mailto:contact@branebridge.com">contact@branebridge.com</a>
+        </p>
+      </div>
     </Section>
   );
 }
