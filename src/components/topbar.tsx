@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { BraneBridgeLogo } from "./logo";
 
 export function Topbar() {
   return (
@@ -8,12 +8,7 @@ export function Topbar() {
         href="#hero"
         className="hover:opacity-75 transition-all duration-300"
       >
-        <Image
-          src="/images/branebridge-logo-green.svg"
-          alt="BraneBridge logo"
-          width={200}
-          height={200}
-        />
+        <BraneBridgeLogo />
       </Link>
 
       <div className="flex items-center w-1/2 justify-between text-primary-foreground">

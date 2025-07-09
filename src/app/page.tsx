@@ -12,6 +12,7 @@ export default function Home() {
       <Industry />
       <AboutUs />
       <Contact />
+      <Footer />
     </div>
   );
 }
@@ -257,12 +258,57 @@ function Contact() {
         <textarea placeholder="Message" />
         <button type="submit">Send</button>
       </form>
+function Footer() {
+  return (
+    <Section className="bg-black text-white text-sm" id="footer">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-4">
+          <BraneBridgeLogo />
+          <p>
+            BraneBridge builds custom software solutions for the logistics
+            industry, with an emphasis on AI adoption.
+          </p>
+          <Button
+            variant="outline"
+            size="icon"
+            asChild
+            className="bg-black text-white"
+          >
+            <Link href="https://www.linkedin.com/in/shelsoloa/">
+              <Linkedin />
+            </Link>
+          </Button>
+        </div>
+        <div className="hidden lg:block">
+          {/* TODO navigation links here */}
+        </div>
 
-      <div className="flex gap-4">
-        <p>
-          Email:{" "}
-          <a href="mailto:contact@branebridge.com">contact@branebridge.com</a>
-        </p>
+        <div className="flex flex-col gap-2">
+          <h1 className="text-lg font-bold">Contact Info</h1>
+          <div className="flex flex-col">
+            <p className="text-muted-foreground">email</p>
+            <a href="mailto:contact@branebridge.com">contact@branebridge.com</a>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-muted-foreground">phone</p>
+            <a href="tel:+14169999999">+1 (416) 999-9999</a>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-muted-foreground">location</p>
+            <p>Toronto, ON, Canada</p>
+          </div>
+        </div>
+      </div>
+      <hr className="my-8" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-sm text-muted-foreground">
+        <p>Copyright © {new Date().getFullYear()} BraneBridge</p>
+        <div className="hidden lg:block">&nbsp;</div>
+        <div className="flex gap-4">
+          {/* TODO: Add privacy policy, terms of service, and cookie policy */}
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
       </div>
     </Section>
   );
