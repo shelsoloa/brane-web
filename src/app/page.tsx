@@ -2,6 +2,15 @@ import { Button } from "@/components/ui/button";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { BraneBridgeLogo } from "@/components/logo";
+import { Linkedin } from "lucide-react";
 
 export default function Home() {
   return (
@@ -63,10 +72,11 @@ function WhoAreWe() {
   return (
     <Section className="bg-black text-white p-8 flex gap-4" id="agency-about">
       <SectionTitle>
-        We are your partner in Data, Cloud, and AI Product Development
+        Your partner in Data Engineering, Cloud Engineering, and AI Agent
+        Development.
       </SectionTitle>
       <Button className="self-end text-black" variant="outline">
-        <a href="mailto:contact@branebridge.com">Contact Us</a>
+        <a href="#contact">Contact Us</a>
       </Button>
     </Section>
   );
@@ -246,18 +256,33 @@ function Contact() {
     <Section className="bg-accent text-white" id="contact">
       <SectionTitle>Contact Us</SectionTitle>
 
-      <p>Reach out with any questions or inquiries.</p>
+      <Card>
+        <CardHeader>
+          <CardTitle>Contact Us</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <form
+            className="flex flex-col gap-4"
+            action="mailto:contact@branebridge.com"
+          >
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Company" />
+            <textarea placeholder="Message" />
+            <button type="submit">Send</button>
+          </form>
+        </CardContent>
+        <CardFooter>
+          <p>
+            Email:{" "}
+            <a href="mailto:contact@branebridge.com">contact@branebridge.com</a>
+          </p>
+        </CardFooter>
+      </Card>
+    </Section>
+  );
+}
 
-      <form
-        className="flex flex-col gap-4"
-        action="mailto:contact@branebridge.com"
-      >
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Company" />
-        <textarea placeholder="Message" />
-        <button type="submit">Send</button>
-      </form>
 function Footer() {
   return (
     <Section className="bg-black text-white text-sm" id="footer">

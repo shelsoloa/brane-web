@@ -5,7 +5,7 @@ import { anka_coder } from "@/styles/fonts";
 
 export const metadata: Metadata = {
   title: "BraneBridge Systems",
-  description: "Scale with BraneBridge Systems",
+  description: "Scale your logistics business with BraneBridge Systems",
 };
 
 export default function RootLayout({

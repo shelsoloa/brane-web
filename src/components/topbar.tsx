@@ -15,7 +15,7 @@ export function Topbar() {
         <Link href="#services" className="hover:text-primary">
           SERVICES
         </Link>
-        <Link href="#agency-about" className="hover:text-primary">
+        <Link href="#team" className="hover:text-primary">
           ABOUT
         </Link>
         <Link href="#contact" className="hover:text-primary">
