@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { BraneBridgeLogo } from "@/components/logo";
 import { Linkedin } from "lucide-react";
+import { ContactForm } from "./forms";
 
 export default function Home() {
   return (
@@ -261,22 +262,20 @@ function Contact() {
           <CardTitle>Contact Us</CardTitle>
         </CardHeader>
         <CardContent>
-          <form
-            className="flex flex-col gap-4"
-            action="mailto:contact@branebridge.com"
-          >
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Company" />
-            <textarea placeholder="Message" />
-            <button type="submit">Send</button>
-          </form>
+          <ContactForm />
         </CardContent>
         <CardFooter>
-          <p>
-            Email:{" "}
-            <a href="mailto:contact@branebridge.com">contact@branebridge.com</a>
-          </p>
+          <div className="flex w-full">
+            <p className="text-sm text-muted-foreground text-right block w-full">
+              or email us directly at{" "}
+              <a
+                className="underline hover:text-primary"
+                href="mailto:contact@branebridge.com"
+              >
+                contact@branebridge.com
+              </a>
+            </p>
+          </div>
         </CardFooter>
       </Card>
     </Section>
@@ -316,6 +315,7 @@ function Footer() {
           </div>
           <div className="flex flex-col">
             <p className="text-muted-foreground">phone</p>
+            {/* TODO: add phone number */}
             <a href="tel:+14169999999">+1 (416) 999-9999</a>
           </div>
           <div className="flex flex-col">

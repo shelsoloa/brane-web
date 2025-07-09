@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Topbar } from "@/components/topbar";
 import { anka_coder } from "@/styles/fonts";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "BraneBridge Systems",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <Topbar />
         {children}
+        <Toaster />
       </body>
     </html>
   );
