@@ -30,10 +30,30 @@ export function ContactForm() {
 
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <input name="name" type="text" placeholder="Name" />
-      <input name="email" type="email" placeholder="Email" />
-      <input name="company" type="text" placeholder="Company" />
-      <textarea name="message" placeholder="Message" rows={4} />
+      <input
+        className="rounded px-4 py-2"
+        name="name"
+        type="text"
+        placeholder="Name"
+      />
+      <input
+        className="rounded px-4 py-2"
+        name="email"
+        type="email"
+        placeholder="Email"
+      />
+      <input
+        className="rounded px-4 py-2"
+        name="company"
+        type="text"
+        placeholder="Company"
+      />
+      <textarea
+        className="rounded px-4 py-2"
+        name="message"
+        placeholder="What can we help you with?"
+        rows={2}
+      />
 
       <Button type="submit">Send</Button>
     </form>

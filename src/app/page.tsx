@@ -255,11 +255,11 @@ function AboutUs() {
 function Contact() {
   return (
     <Section className="bg-accent text-white" id="contact">
-      <SectionTitle>Contact Us</SectionTitle>
-
       <Card>
         <CardHeader>
-          <CardTitle>Contact Us</CardTitle>
+          <CardTitle>
+            <SectionTitle>Contact Us</SectionTitle>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <ContactForm />
