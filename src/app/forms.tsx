@@ -9,7 +9,7 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
+    // const formData = new FormData(e.target as HTMLFormElement);
     // const { error } = await sendContactEmail(formData);
 
     const error = "Not implemented";
