@@ -3,8 +3,8 @@ import { BraneBridgeLogo } from "./logo";
 
 export function Topbar() {
   return (
-    <div className="bg-black">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-8">
+    <div className="bg-black p-8">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link
           href="#hero"
           className="hover:opacity-75 transition-all duration-300"
