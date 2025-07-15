@@ -110,9 +110,12 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Inquiry</FormLabel>
               <FormControl>
-                <Textarea {...field} placeholder="What can we help you with?" />
+                <Textarea
+                  {...field}
+                  placeholder="Describe what you would like to automate."
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BraneBridgeLogo } from "./logo";
+import { Button } from "./ui/button";
 
 export function Topbar() {
   return (
@@ -19,9 +20,9 @@ export function Topbar() {
           <Link href="#team" className="hover:text-primary">
             ABOUT US
           </Link>
-          <Link href="#contact" className="hover:text-primary">
-            CONTACT
-          </Link>
+          <Button asChild>
+            <Link href="#contact">GET QUOTE</Link>
+          </Button>
         </div>
       </div>
     </div>

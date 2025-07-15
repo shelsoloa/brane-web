@@ -79,10 +79,19 @@ function Hero() {
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="max-w-7xl mx-auto w-full">
-          <p className="w-1/2 text-left text-xl text-primary-foreground font-bold">
-            Bring the power of AI, Data Engineering, & Cloud Computing to your
-            logistics business.
-          </p>
+          <div className="flex flex-col gap-4 w-full sm:w-2/3 md:w-1/2">
+            <h1 className="text-2xl font-bold mt-4 text-white uppercase">
+              BraneBridge is building for Canada&apos;s Industrial Backbone
+            </h1>
+
+            <p className="text-lg text-white/90">
+              We work with forward-thinking companies across{" "}
+              <b>logistics, manufacturing, and industrial operations</b>.
+              Whether you&apos;re a growing freight brokerage or a steel plant
+              modernizing your systems,{" "}
+              <b>we build software to move you forward</b>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -91,21 +100,28 @@ function Hero() {
 
 function WhoAreWe() {
   return (
-    <Section className="bg-black text-white p-8 flex gap-4" id="agency-about">
-      <SectionTitle>
-        Your partner in Data Engineering, Cloud Engineering, and AI Agent
-        Development.
+    <Section className="bg-black text-white py-16 flex gap-4" id="agency-about">
+      <SectionTitle className="mb-0">
+        Your new partner in <span className="text-primary">AI Integration</span>
+        , <span className="text-primary">Data Engineering</span>,{" "}
+        <span className="text-primary">Cloud Engineering</span>, and{" "}
+        <span className="text-primary">Product Development</span>.
       </SectionTitle>
-      <Button className="self-end text-black" variant="outline">
-        <a href="#contact">Contact Us</a>
-      </Button>
+      <div className="flex justify-end">
+        <Button variant="default" size="lg">
+          <a href="#contact">Get a Quote</a>
+        </Button>
+      </div>
     </Section>
   );
 }
 
 function Services() {
   return (
-    <Section className="bg-white flex flex-col gap-4 w-full" id="services">
+    <Section
+      className="bg-white flex flex-col gap-4 w-full py-16"
+      id="services"
+    >
       <SectionTitle>Solutions & Services</SectionTitle>
 
       <Tabs
@@ -293,6 +309,7 @@ function Industry() {
               alt="Several cargo containers"
               width={800}
               height={600}
+              className="rounded-sm shadow-lg"
             />
             <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
             <p>Freight brokerages, 3PLs, carrier networks, dispatch centers.</p>
@@ -305,7 +322,7 @@ function Industry() {
         </Card>
 
         <Card>
-          <CardHeader className="text-xl font-bold uppercase line-clamp-2">
+          <CardHeader className="text-xl md:text-lg lg:text-xl font-bold uppercase">
             Warehousing & Distribution
           </CardHeader>
           <CardContent>
@@ -314,6 +331,7 @@ function Industry() {
               alt="Warehouse"
               width={800}
               height={600}
+              className="rounded-sm shadow-lg"
             />
             <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
             <p>
@@ -329,7 +347,7 @@ function Industry() {
           </CardContent>
         </Card>
         <Card>
-          <CardHeader className="text-xl font-bold uppercase ">
+          <CardHeader className="text-xl md:text-lg lg:text-xl font-bold uppercase">
             Manufacturing & Industrial Operations
           </CardHeader>
           <CardContent>
@@ -338,6 +356,7 @@ function Industry() {
               alt="Steel production"
               width={800}
               height={600}
+              className="rounded-sm shadow-lg"
             />
             <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
             <p>
@@ -351,7 +370,7 @@ function Industry() {
           </CardContent>
         </Card>
         <Card>
-          <CardHeader className="text-xl font-bold uppercase">
+          <CardHeader className="text-xl md:text-lg lg:text-xl font-bold uppercase">
             Construction & Real Estate
           </CardHeader>
           <CardContent>
@@ -360,6 +379,7 @@ function Industry() {
               alt="Construction site"
               width={800}
               height={600}
+              className="rounded-sm shadow-lg"
             />
             <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
             <p>Contractors, site managers, real estate development teams.</p>
@@ -371,7 +391,7 @@ function Industry() {
           </CardContent>
         </Card>
         <Card>
-          <CardHeader className="text-xl font-bold uppercase">
+          <CardHeader className="text-xl md:text-lg lg:text-xl font-bold uppercase">
             Special Projects & Tech-Enabled SMBs
           </CardHeader>
           <CardContent>
@@ -380,6 +400,7 @@ function Industry() {
               alt="Special Projects"
               width={800}
               height={600}
+              className="rounded-sm shadow-lg"
             />
             <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
             <p>
@@ -395,7 +416,7 @@ function Industry() {
         </Card>
       </div>
 
-      <h2 className="text-xl font-bold mt-8 text-gray-400">
+      <h2 className="text-xl font-bold mt-8 text-gray-400 text-center">
         If your business moves goods, coordinates teams, or manages complex
         operations, we can build what you need.
       </h2>
