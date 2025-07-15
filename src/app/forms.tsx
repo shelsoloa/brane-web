@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-// import { sendContactEmail } from "@/app/actions";
+import { sendContactEmail } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 
 export function ContactForm() {
@@ -9,10 +9,8 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // const formData = new FormData(e.target as HTMLFormElement);
-    // const { error } = await sendContactEmail(formData);
-
-    const error = "Not implemented";
+    const formData = new FormData(e.target as HTMLFormElement);
+    const { error } = await sendContactEmail(formData);
 
     if (error) {
       toast({
