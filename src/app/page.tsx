@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { BraneBridgeLogo } from "@/components/logo";
-import { Linkedin } from "lucide-react";
+import { Bot, Cloudy, Linkedin, TruckElectric, Workflow } from "lucide-react";
 import { ContactForm } from "./forms";
 
 export default function Home() {
@@ -85,89 +85,132 @@ function WhoAreWe() {
 
 function Services() {
   return (
-    <Section className="bg-white" id="services">
+    <Section className="bg-white flex flex-col gap-4 w-full" id="services">
       <SectionTitle>Solutions & Services</SectionTitle>
 
-      <ul className="flex flex-col gap-4">
-        <li>
-          <h2>AI Agents for Load Matching & Dispatching</h2>
-          <p>
-            We build AI agents that can automate your business processes and
-            improve your efficiency.
-          </p>
-        </li>
-        <li>
-          <h2>Custom Portal / Workflow Dashboard MVP</h2>
-          <p>
-            We build a custom portal / workflow dashboard MVP for your business.
-          </p>
-        </li>
-        <li>
-          <h2>AI RAG Pipelines for Information Retrieval</h2>
-          <p>
-            We build AI RAG pipelines that can automate your business processes
-            and improve your efficiency. We can also build a custom RAG pipeline
-            for your business.
-          </p>
-        </li>
-      </ul>
-
-      {/* 
       <Tabs
+        orientation="vertical"
         defaultValue="agents"
-        className="border-2 rounded-lg border-black pb-4"
+        className="w-full flex flex-col sm:flex-row items-start justify-center transition-none duration-0"
       >
-        <TabsList className="flex h-12 md:gap-4">
+        <TabsList className="shrink-0 grid grid-cols-1 h-auto w-full sm:w-fit gap-1 bg-muted sm:rounded-r-none border border-b-0 rounded-b-none sm:border-b sm:rounded-bl sm:border-r-0 border-black">
           <TabsTrigger
-            className="text-sm md:text-base whitespace-normal"
+            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-black data-[state=active]:border-2 justify-start px-3 py-1.5"
             value="agents"
           >
-            AI Agents
+            <Bot className="w-4 h-4 me-2" /> AI Agents
           </TabsTrigger>
           <TabsTrigger
-            className="text-sm md:text-base whitespace-normal"
+            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-black data-[state=active]:border-2 justify-start px-3 py-1.5"
             value="rag"
           >
-            AI RAG Pipelines
+            <Workflow className="w-4 h-4 me-2" /> AI Tooling & RAG
           </TabsTrigger>
           <TabsTrigger
-            className="text-sm md:text-base whitespace-normal"
+            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-black data-[state=active]:border-2 justify-start px-3 py-1.5"
             value="cloud"
           >
-            Cloud Engineering
+            <Cloudy className="w-4 h-4 me-2" /> Cloud Engineering
           </TabsTrigger>
           <TabsTrigger
-            className="text-sm md:text-base whitespace-normal"
+            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-black data-[state=active]:border-2 justify-start px-3 py-1.5"
             value="product"
           >
-            Product Development
+            <TruckElectric className="w-4 h-4 me-2" /> MVP Development
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="agents" className="px-8">
-          <p>AI Agents</p>
-          <Button className="text-black mt-4" variant="outline">
-            <a href="mailto:contact@branebridge.com">Learn More</a>
-          </Button>
-        </TabsContent>
-        <TabsContent value="rag" className="px-8">
-          <p>AI RAG Pipelines</p>
-          <Button className="text-black mt-4" variant="outline">
-            <a href="mailto:contact@branebridge.com">Learn More</a>
-          </Button>
-        </TabsContent>
-        <TabsContent value="cloud" className="px-8">
-          <p>Cloud Engineering</p>
-          <Button className="text-black mt-4" variant="outline">
-            <a href="mailto:contact@branebridge.com">Learn More</a>
-          </Button>
-        </TabsContent>
-        <TabsContent value="product" className="px-8">
-          <p>Product Development</p>
-          <Button className="text-black mt-4" variant="outline">
-            <a href="mailto:contact@branebridge.com">Learn More</a>
-          </Button>
-        </TabsContent>
-      </Tabs> */}
+
+        <div className="min-h-40 flex items-center justify-center w-full border sm:rounded-tl-none rounded-md rounded-t-none sm:rounded-t font-medium px-4 sm:px-8 border-black pb-4">
+          <TabsContent key="agents" value="agents" className="h-full">
+            <h2 className="text-2xl font-bold">
+              AI Agents for Logistics Automation
+            </h2>
+            <p className="mt-4">
+              We design, develop, and deploy custom AI agents purpose-built for
+              logistics operations. From <b>automating load matching</b> to{" "}
+              <b>intelligent dispatch coordination</b>, our agents{" "}
+              <b>reduce manual workflows</b> and{" "}
+              <b>drive operational efficiency</b>.
+            </p>
+            <h3 className="text-lg font-bold mt-4">Use Cases</h3>
+            <ul className="list-disc list-inside pl-4">
+              <li>Load matching automation</li>
+              <li>Dispatch optimization</li>
+              <li>ETA prediction and routing support</li>
+              <li>Customer communication agents</li>
+              <li>Rate negotiation bots</li>
+            </ul>
+            <h3 className="text-lg font-bold mt-4">Outcome</h3>
+            <p>
+              Lower operational overhead, faster response times, scalable
+              logistics execution.
+            </p>
+          </TabsContent>
+          <TabsContent key="rag" value="rag" className="h-full">
+            <h2 className="text-2xl font-bold">AI Tooling & RAG Pipelines</h2>
+            <p className="mt-4">
+              Build intelligent AI tools that power internal logistics
+              workflows. We specialize in Retrieval-Augmented Generation (RAG)
+              pipelines to transform unstructured documents into actionable
+              insights.
+            </p>
+            <h3 className="text-lg font-bold mt-4">Use Cases</h3>
+            <ul className="list-disc list-inside pl-4">
+              <li>
+                Instant retrieval from rate sheets, bills of lading, contracts
+              </li>
+              <li>Document Q&A over SOPs and compliance policies</li>
+              <li>AI assistants for onboarding new drivers or customers</li>
+            </ul>
+            <h3 className="text-lg font-bold mt-4">Outcome</h3>
+            <p>
+              Knowledge access in seconds, fewer human errors, improved training
+              and compliance.
+            </p>
+          </TabsContent>
+          <TabsContent key="cloud" value="cloud" className="h-full">
+            <h2 className="text-2xl font-bold">
+              Cloud Engineering for Logistics Platforms
+            </h2>
+            <p className="mt-4">
+              Optimize infrastructure for uptime, scale, and cost. Our certified
+              engineers bring expertise in cloud-native architecture tailored to
+              logistics environments.
+            </p>
+            <h3 className="text-lg font-bold mt-4">Use Cases</h3>
+            <ul className="list-disc list-inside pl-4">
+              <li>GCP/AWS cost optimization</li>
+              <li>Fleet tracking platform infrastructure</li>
+              <li>Event-driven architecture for TMS/ERP systems</li>
+              <li>Scalable backend systems for freight marketplaces</li>
+            </ul>
+            <h3 className="text-lg font-bold mt-4">Outcome</h3>
+            <p>
+              Faster systems, lower cloud bills, hardened backend for logistics
+              uptime.
+            </p>
+          </TabsContent>
+          <TabsContent key="product" value="product" className="h-full">
+            <h2 className="text-2xl font-bold">Logistics MVP Development</h2>
+            <p className="mt-4">
+              Rapidly develop and launch logistics software products. Whether
+              you&apos;re validating a marketplace, building a new TMS, or
+              prototyping a visibility dashboard—our team delivers.
+            </p>
+            <h3 className="text-lg font-bold mt-4">Use Cases</h3>
+            <ul className="list-disc list-inside pl-4">
+              <li>Freight booking MVPs</li>
+              <li>Internal dispatch dashboards</li>
+              <li>Real-time tracking applications</li>
+              <li>Customer portals for rates and delivery updates</li>
+            </ul>
+            <h3 className="text-lg font-bold mt-4">Outcome</h3>
+            <p>
+              Get to market faster, iterate on feedback, launch with confidence.
+            </p>
+          </TabsContent>
+        </div>
+      </Tabs>
     </Section>
   );
 }
