@@ -17,7 +17,7 @@ export function Topbar() {
             SERVICES
           </Link>
           <Link href="#team" className="hover:text-primary">
-            ABOUT
+            ABOUT US
           </Link>
           <Link href="#contact" className="hover:text-primary">
             CONTACT

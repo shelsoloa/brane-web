@@ -279,51 +279,40 @@ function AboutUs() {
         <span className="underline">Logistics</span> industry grow.
       </p>
 
-      <br />
-
-      <h2 className="text-2xl font-bold">About our Founder</h2>
-      <div className="grid grid-cols-3 gap-4 mt-4">
-        <div className="flex flex-col items-center gap-4">
+      <h2 className="text-2xl font-bold mt-8">Meet our Founder</h2>
+      <div className="flex flex-col gap-4 mt-4 sm:flex-row-reverse">
+        <div className="flex flex-col gap-1 items-center justify-center text-center sm:w-1/3">
           <Image
             src="/images/sheldon-headshot.jpg"
-            alt="Founder"
-            width={300}
-            height={300}
-            className="rounded-full"
+            alt="Founder headshot, Sheldon Soloa"
+            width={200}
+            height={200}
+            className="rounded-md"
           />
-          <div className="flex flex-col gap-1 text-center">
+          <div className="flex flex-row gap-1">
             <a
               className="text-sm underline"
               href="mailto:sheldon@branebridge.com"
             >
-              sheldon@branebridge.com
+              <Mail className="w-4 h-4 me-2" />
             </a>
             <Link
               className="text-sm underline"
               href="https://www.linkedin.com/in/shelsoloa/"
             >
-              LinkedIn
+              <Linkedin className="w-4 h-4 me-2" />
             </Link>
           </div>
         </div>
-        <div className="col-span-2">
-          <h3 className="text-lg font-bold">Sheldon Soloa</h3>
-          <p className="text-lg">Founder & CEO, BraneBridge</p>
+        <div className="flex flex-col gap-2 sm:w-2/3">
+          <div className="flex flex-col">
+            <h3 className="text-lg font-bold">Sheldon Soloa</h3>
+            <p className="text-muted-foreground">Founder & CEO</p>
+          </div>
           <p className="text-sm">
             Sheldon is a Hamilton-born, Toronto-based software engineer and
             technical leader with over a decade of experience architecting
-            cloud-native systems and delivering scalable software solutions. He
-            has led development teams across early-stage startups and high-scale
-            environments, including OtO Inc., where he served as Lead Software
-            Engineer through to acquisition.
-            <br />
-            <br />
-            Prior to founding BraneBridge, Sheldon held engineering and
-            leadership roles at OtO Inc., Yelp, and GABZEBO Inc., specializing
-            in cloud infrastructure, AI-powered backend services, and full-stack
-            product development. His work consistently bridges deep technical
-            execution with real-world business outcomes; particularly for SMBs
-            in traditional sectors.
+            cloud-native systems and delivering scalable software solutions.
             <br />
             <br />
             Through BraneBridge, he brings this experience to underserved
