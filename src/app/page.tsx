@@ -544,8 +544,7 @@ function Footer() {
           </div>
           <div className="flex flex-col">
             <p className="text-muted-foreground">phone</p>
-            {/* TODO: add phone number */}
-            <a href="tel:+14169999999">+1 (416) 999-9999</a>
+            <a href="tel:+12897688660">+1 (289) 768-8660</a>
           </div>
           <div className="flex flex-col">
             <p className="text-muted-foreground">location</p>
