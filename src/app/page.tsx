@@ -51,8 +51,18 @@ function Section({
   );
 }
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h1 className="text-4xl font-bold uppercase">{children}</h1>;
+function SectionTitle({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <h1 className={`text-4xl font-bold uppercase mb-8 ${className}`}>
+      {children}
+    </h1>
+  );
 }
 
 function Hero() {
@@ -259,12 +269,136 @@ function Services() {
 function Industry() {
   return (
     <Section className="bg-black text-white" id="industry">
-      <SectionTitle>Who do we serve?</SectionTitle>
+      <SectionTitle>Industries We Serve</SectionTitle>
+
+      <h1 className="text-2xl font-bold mt-4">
+        Building for Canada&apos;s Industrial Backbone
+      </h1>
 
       <p>
-        We are focused on serving the Canadian{" "}
-        <span className="underline">Logistics</span> industry.
+        We work with forward-thinking companies across logistics, manufacturing,
+        and industrial operations. Whether you&apos;re a growing freight
+        brokerage or a steel plant modernizing your systems, we build software
+        to move you forward.
       </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <Card>
+          <CardHeader className="text-xl md:text-lg lg:text-xl font-bold uppercase">
+            Logistics & Freight
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://images.unsplash.com/photo-1465844880937-7c02addc633b?w=800&h=600&fit=crop&crop=entropy&auto=format&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&&sat=-100"
+              alt="Several cargo containers"
+              width={800}
+              height={600}
+            />
+            <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
+            <p>Freight brokerages, 3PLs, carrier networks, dispatch centers.</p>
+            <h3 className="text-lg font-bold mt-4">What we build:</h3>
+            <p>
+              AI agents for load matching, dispatch tools, internal RAG
+              assistants, and cloud-native TMS infrastructure.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="text-xl font-bold uppercase line-clamp-2">
+            Warehousing & Distribution
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sat=-100"
+              alt="Warehouse"
+              width={800}
+              height={600}
+            />
+            <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
+            <p>
+              Warehousing providers, 3PLs, distribution centers, fulfillment
+              teams.
+            </p>
+            <h3 className="text-lg font-bold mt-4">What we build:</h3>
+            <p>
+              Scheduling bots, inventory system integrations, cloud scaling for
+              WMS platforms, and AI document search for inbound/outbound
+              logistics.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="text-xl font-bold uppercase ">
+            Manufacturing & Industrial Operations
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://images.unsplash.com/photo-1647343137860-69ccd12a61c6?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sat=-100"
+              alt="Steel production"
+              width={800}
+              height={600}
+            />
+            <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
+            <p>
+              Steel producers, component fabricators, supply chain operators.
+            </p>
+            <h3 className="text-lg font-bold mt-4">What we build:</h3>
+            <p>
+              AI document systems for SOPs and compliance, internal workflow
+              agents, and cloud optimization for MES/ERP integrations.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="text-xl font-bold uppercase">
+            Construction & Real Estate
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sat=-100"
+              alt="Construction site"
+              width={800}
+              height={600}
+            />
+            <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
+            <p>Contractors, site managers, real estate development teams.</p>
+            <h3 className="text-lg font-bold mt-4">What we build:</h3>
+            <p>
+              AI tools for vendor management, compliance document retrieval,
+              permit Q&A agents, and platform backend development.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="text-xl font-bold uppercase">
+            Special Projects & Tech-Enabled SMBs
+          </CardHeader>
+          <CardContent>
+            <Image
+              src="https://images.unsplash.com/photo-1616386261012-8a328c89d5b6?q=80&w=800&h=600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&sat=-100"
+              alt="Special Projects"
+              width={800}
+              height={600}
+            />
+            <h3 className="text-lg font-bold mt-4">Who we serve:</h3>
+            <p>
+              Startups, internal innovation teams, cross-industry operators
+              modernizing their stack.
+            </p>
+            <h3 className="text-lg font-bold mt-4">What we build:</h3>
+            <p>
+              Custom MVPs, internal data agents, proof-of-concept RAG tools,
+              backend systems from zero to launch.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      <h2 className="text-xl font-bold mt-8 text-gray-400">
+        If your business moves goods, coordinates teams, or manages complex
+        operations, we can build what you need.
+      </h2>
     </Section>
   );
 }
@@ -275,7 +409,7 @@ function AboutUs() {
       <SectionTitle>Who are we?</SectionTitle>
       <p>
         We are a team of experienced Canadian engineers and product managers who
-        are passionate about building products that helps the Canadian{" "}
+        are passionate about building software that helps the Canadian{" "}
         <span className="underline">Logistics</span> industry grow.
       </p>
 
@@ -332,7 +466,7 @@ function Contact() {
       <Card className="max-w-4xl mx-auto border-black border-2">
         <CardHeader>
           <CardTitle>
-            <SectionTitle>Contact Us</SectionTitle>
+            <SectionTitle className="mb-0">Contact Us</SectionTitle>
           </CardTitle>
         </CardHeader>
         <CardContent>
