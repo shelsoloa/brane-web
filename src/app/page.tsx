@@ -38,7 +38,7 @@ function Section({
 }) {
   return (
     <div className={`p-8 ${className}`} id={id}>
-      {children}
+      <div className="max-w-7xl mx-auto">{children}</div>
     </div>
   );
 }
@@ -50,7 +50,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 function Hero() {
   return (
     <div className="h-[50vh]" id="hero">
-      <div className="w-full h-full flex items-center justify-left relative px-8">
+      <div className="w-full h-full flex items-center relative px-8">
         <video
           autoPlay
           muted
@@ -60,10 +60,12 @@ function Hero() {
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <p className="w-1/2 text-left text-xl text-primary-foreground font-bold">
-          Bring the power of AI, Data Engineering, & Cloud Computing to your
-          logistics business.
-        </p>
+        <div className="max-w-7xl mx-auto w-full">
+          <p className="w-1/2 text-left text-xl text-primary-foreground font-bold">
+            Bring the power of AI, Data Engineering, & Cloud Computing to your
+            logistics business.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -298,7 +300,7 @@ function AboutUs() {
 function Contact() {
   return (
     <Section className="bg-accent text-white" id="contact">
-      <Card className="max-w-4xl mx-auto">
+      <Card className="max-w-4xl mx-auto border-black border-2">
         <CardHeader>
           <CardTitle>
             <SectionTitle>Contact Us</SectionTitle>
