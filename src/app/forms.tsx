@@ -1,16 +1,44 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { sendContactEmail } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+
+const SendContactEmailSchema = z.object({
+  name: z.string().min(1),
+  email: z.email(),
+  company: z.string().min(1),
+  message: z.string().min(1),
+});
 
 export function ContactForm() {
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    const { error } = await sendContactEmail(formData);
+  const form = useForm<z.infer<typeof SendContactEmailSchema>>({
+    resolver: zodResolver(SendContactEmailSchema),
+  });
+
+  const onSubmit = async (formData: z.infer<typeof SendContactEmailSchema>) => {
+    const f = new FormData();
+    f.append("name", formData.name);
+    f.append("email", formData.email);
+    f.append("company", formData.company);
+    f.append("message", formData.message);
+
+    const { error } = await sendContactEmail(f);
 
     if (error) {
       toast({
@@ -20,40 +48,79 @@ export function ContactForm() {
       });
     } else {
       toast({
-        title: "Success",
-        description: "Email sent successfully",
+        title: "Sent!",
+        description:
+          "Contact request sent successfully. We will get back to you soon.",
       });
+      form.reset();
     }
   };
 
   return (
-    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <input
-        className="rounded px-4 py-2"
-        name="name"
-        type="text"
-        placeholder="Name"
-      />
-      <input
-        className="rounded px-4 py-2"
-        name="email"
-        type="email"
-        placeholder="Email"
-      />
-      <input
-        className="rounded px-4 py-2"
-        name="company"
-        type="text"
-        placeholder="Company"
-      />
-      <textarea
-        className="rounded px-4 py-2"
-        name="message"
-        placeholder="What can we help you with?"
-        rows={2}
-      />
+    <Form {...form}>
+      <form
+        className="flex flex-col gap-4"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input {...field} placeholder="Enter your name" type="text" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl>
+                <Input {...field} placeholder="Enter your email" type="email" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="company"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Company</FormLabel>
+              <FormControl>
+                <Input
+                  {...field}
+                  placeholder="Enter your company"
+                  type="text"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message</FormLabel>
+              <FormControl>
+                <Textarea {...field} placeholder="What can we help you with?" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-      <Button type="submit">Send</Button>
-    </form>
+        <Button type="submit">Send</Button>
+      </form>
+    </Form>
   );
 }
