@@ -10,7 +10,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { BraneBridgeLogo } from "@/components/logo";
-import { Bot, Cloudy, Linkedin, TruckElectric, Workflow } from "lucide-react";
+import {
+  Bot,
+  Cloudy,
+  Linkedin,
+  Mail,
+  ShieldCheck,
+  TruckElectric,
+  Workflow,
+} from "lucide-react";
 import { ContactForm } from "./forms";
 
 export default function Home() {
@@ -120,6 +128,12 @@ function Services() {
           >
             <TruckElectric className="w-4 h-4 me-2" /> MVP Development
           </TabsTrigger>
+          <TabsTrigger
+            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:border-black data-[state=active]:border-2 justify-start px-3 py-1.5"
+            value="private"
+          >
+            <ShieldCheck className="w-4 h-4 me-2" /> Private AI
+          </TabsTrigger>
         </TabsList>
 
         <div className="min-h-40 flex items-center justify-center w-full border sm:rounded-tl-none rounded-md rounded-t-none sm:rounded-t font-medium px-4 sm:px-8 border-black pb-4">
@@ -197,7 +211,7 @@ function Services() {
             <p className="mt-4">
               Rapidly develop and launch logistics software products. Whether
               you&apos;re validating a marketplace, building a new TMS, or
-              prototyping a visibility dashboard—our team delivers.
+              prototyping a visibility dashboard - our team delivers.
             </p>
             <h3 className="text-lg font-bold mt-4">Use Cases</h3>
             <ul className="list-disc list-inside pl-4">
@@ -209,6 +223,31 @@ function Services() {
             <h3 className="text-lg font-bold mt-4">Outcome</h3>
             <p>
               Get to market faster, iterate on feedback, launch with confidence.
+            </p>
+          </TabsContent>
+          <TabsContent key="private" value="private" className="h-full">
+            <h2 className="text-2xl font-bold">
+              Private AI Deployments for Logistics
+            </h2>
+            <p className="mt-4">
+              For companies with strict data privacy, compliance, or IT security
+              requirements, we offer fully private deployments of AI systems -
+              on your cloud, under your control.
+            </p>
+            <h3 className="text-lg font-bold mt-4">Use Cases</h3>
+            <ul className="list-disc list-inside pl-4">
+              <li>On-premise or VPC-hosted AI agents</li>
+              <li>RAG systems behind company firewall</li>
+              <li>
+                Sensitive load, client, or routing data never leaves your
+                environment
+              </li>
+              <li>SOC 2-aligned architectural setup</li>
+            </ul>
+            <h3 className="text-lg font-bold mt-4">Outcome</h3>
+            <p>
+              Full control over data, compliance-ready AI tools, zero
+              third-party exposure.
             </p>
           </TabsContent>
         </div>
@@ -229,6 +268,7 @@ function Industry() {
     </Section>
   );
 }
+
 function AboutUs() {
   return (
     <Section className="" id="team">
