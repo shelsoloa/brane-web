@@ -5,8 +5,15 @@ import { anka_coder } from "@/styles/fonts";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "BraneBridge Systems",
-  description: "Scale your logistics business with BraneBridge Systems",
+  title: "BraneBridge | Software Solutions for Industry",
+  description: "Scale your logistics business with BraneBridge systems",
+  keywords: [
+    "BraneBridge",
+    "Software Solutions",
+    "Industry",
+    "Logistics",
+    "Automation",
+  ],
 };
 
 export default function RootLayout({
