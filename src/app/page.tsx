@@ -527,7 +527,7 @@ function Footer() {
             asChild
             className="bg-black text-white"
           >
-            <Link href="https://www.linkedin.com/in/shelsoloa/">
+            <Link href="https://www.linkedin.com/company/branebridge/">
               <Linkedin />
             </Link>
           </Button>
