@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Topbar } from "@/components/topbar";
 import { anka_coder } from "@/styles/fonts";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "BraneBridge | Software Solutions for Industry",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Topbar />
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
