@@ -49,9 +49,8 @@ function Hero() {
       </h1>
 
       <p className="mt-6 text-lg sm:text-xl text-[#374151] leading-relaxed">
-        BraneBridge builds automation for freight forwarders in
-        Canada&nbsp;&mdash; so your ops team can stop rekeying data and start
-        moving freight.
+        BraneBridge builds automation for freight forwarders&nbsp;&mdash; so
+        your ops team can stop rekeying data and start moving freight.
       </p>
 
       <div className="mt-10">
@@ -77,13 +76,15 @@ function Problem() {
 
       <div className="mt-12 space-y-10">
         <div>
-          <p className="font-bold text-[#e2e8f0]">Manual document processing.</p>
+          <p className="font-bold text-[#e2e8f0]">
+            Manual document processing.
+          </p>
           <p className="mt-2 text-[#94a3b8] leading-relaxed">
-            Every shipment generates a stack of documents&nbsp;&mdash; bills of
-            lading, commercial invoices, packing lists, customs declarations.
-            Your team is manually reading, rekeying, and cross-referencing this
-            data across systems. It&apos;s slow, error-prone, and it
-            doesn&apos;t scale.
+            Every shipment generates a stack of documents - bills of lading,
+            commercial invoices, packing lists, customs declarations. Your team
+            is manually reading, rekeying, and cross-referencing this data
+            across systems.{" "}
+            <u>It&apos;s slow, error-prone, and it doesn&apos;t scale.</u>
           </p>
         </div>
 
@@ -92,7 +93,7 @@ function Problem() {
           <p className="mt-2 text-[#94a3b8] leading-relaxed">
             Your TMS says one thing, your accounting software says another, and
             the actual shipment status lives in someone&apos;s email. Data lives
-            in silos, and your team spends hours reconciling instead of
+            in silos, and <u>your team spends hours reconciling instead of</u>{" "}
             operating.
           </p>
         </div>
@@ -101,8 +102,8 @@ function Problem() {
           <p className="font-bold text-[#e2e8f0]">Scaling means hiring.</p>
           <p className="mt-2 text-[#94a3b8] leading-relaxed">
             When volume goes up, the only option is adding headcount. Every new
-            customer means more data entry, more coordination, more manual work.
-            Growth should drive margin, not overhead.
+            customer means more data entry, more coordination, more manual work.{" "}
+            <u>Growth should drive margin, not overhead.</u>
           </p>
         </div>
 
@@ -112,9 +113,7 @@ function Problem() {
           </p>
           <p className="mt-2 text-[#94a3b8] leading-relaxed">
             Off-the-shelf freight software often forces you into rigid workflows
-            that don&apos;t match how your team actually operates. Customization
-            means expensive professional services or switching platforms
-            entirely.
+            that don&apos;t match how your team actually operates.
           </p>
         </div>
       </div>
@@ -141,9 +140,8 @@ function WhatWeDo() {
           </p>
           <p className="mt-2 text-[#1a1a1a] leading-[1.7]">
             We build systems that read, extract, and route data from shipping
-            documents&nbsp;&mdash; so your team doesn&apos;t have to. Bills of
-            lading, invoices, customs paperwork&nbsp;&mdash; handled
-            automatically.
+            documents so your team doesn&apos;t have to. Bills of lading,
+            invoices, customs paperwork - <u>handled automatically.</u>
           </p>
         </div>
 
@@ -152,9 +150,9 @@ function WhatWeDo() {
             System integration &amp; data flow.
           </p>
           <p className="mt-2 text-[#1a1a1a] leading-[1.7]">
-            We connect the systems you already use&nbsp;&mdash; TMS, accounting,
-            email, carrier portals&nbsp;&mdash; so data moves between them
-            without manual intervention. One entry, everywhere it needs to go.
+            We connect the systems you already use (TMS, accounting, email,
+            carrier portals) so data moves between them without manual
+            intervention. <u>One entry, everywhere it needs to go.</u>
           </p>
         </div>
 
@@ -163,17 +161,19 @@ function WhatWeDo() {
             Operational workflow automation.
           </p>
           <p className="mt-2 text-[#1a1a1a] leading-[1.7]">
-            Repetitive coordination tasks&nbsp;&mdash; status updates, exception
-            handling, report generation&nbsp;&mdash; automated and reliable. Your
-            team focuses on the work that actually requires human judgment.
+            Repetitive coordination tasks (status updates, exception handling,
+            report generation) automated and reliable.{" "}
+            <u>Your team focuses on the work that actually moves the needle.</u>
           </p>
         </div>
       </div>
 
       <p className="mt-12 text-[#1a1a1a] leading-[1.7]">
-        Every freight forwarder operates differently. We don&apos;t sell a
-        one-size-fits-all platform&nbsp;&mdash; we build automation that fits
-        how your team actually works.
+        Every freight forwarder operates differently.{" "}
+        <b>
+          We don&apos;t sell a one-size-fits-all platform - we build automation
+          that fits how your team actually works.
+        </b>
       </p>
     </Section>
   );
@@ -193,16 +193,15 @@ function About() {
       <div className="mt-8 space-y-4 text-[#111111] leading-[1.7]">
         <p>
           BraneBridge is a Toronto-based software company focused exclusively on
-          freight forwarding operations in Canada. Founded by Sheldon Soloa, a
-          software engineer with over a decade of experience building
-          cloud-native systems, BraneBridge exists to bring modern automation to
-          an industry that&apos;s been underserved by technology.
+          freight intermediary operations. Founded by Sheldon Soloa, a software
+          engineer with over a decade of experience building cloud-native
+          systems, BraneBridge exists to bring modern automation to an industry
+          that&apos;s been underserved by technology.
         </p>
         <p>
-          We&apos;re not a general-purpose consultancy. We work with freight
-          forwarders&nbsp;&mdash; that&apos;s it. We understand the operational
-          complexity, the document-heavy workflows, and the pressure to scale
-          without ballooning headcount.
+          We work with freight forwarders and brokers. We understand the
+          operational complexity, the document-heavy workflows, and the pressure
+          to scale without ballooning headcount.
         </p>
       </div>
 
@@ -215,12 +214,10 @@ function About() {
           className="rounded-md flex-shrink-0"
         />
         <div>
-          <p className="font-bold text-[#0a0a0a]">
-            Sheldon Soloa&nbsp;&mdash; Founder
-          </p>
+          <p className="font-bold text-[#0a0a0a]">Sheldon Soloa, Founder</p>
           <p className="mt-1 text-[#111111] leading-[1.7]">
             Software engineer. Over a decade building scalable systems. Based in
-            Toronto. Focused on making freight forwarding operations run better.
+            Toronto. Focused on making freight operations run better.
           </p>
         </div>
       </div>
@@ -242,7 +239,7 @@ function CTA() {
 
         <p className="mt-4 text-[#374151] leading-relaxed max-w-xl mx-auto">
           If your freight forwarding team is spending too much time on manual
-          work, we should talk. No pitch deck, no demo&nbsp;&mdash; just a
+          work, we should talk. No pitch deck, no demo&nbsp; - just a
           conversation about what&apos;s slowing you down.
         </p>
 
@@ -250,7 +247,7 @@ function CTA() {
           <CardContent className="py-8 flex flex-col items-center gap-4">
             <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
               <a
-                href="https://cal.com/shelsola/intro"
+                href="https://cal.com/branebridge/intro"
                 target="_blank"
                 rel="noopener noreferrer"
               >
