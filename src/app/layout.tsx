@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
+        <div className="h-1 bg-primary" aria-hidden="true" />
         <Topbar />
         {children}
         <Analytics />
