@@ -49,8 +49,8 @@ function Hero() {
       </h1>
 
       <p className="mt-6 text-lg sm:text-xl text-[#374151] leading-relaxed">
-        BraneBridge builds automation for freight forwarders&nbsp;&mdash; so
-        your ops team can stop rekeying data and start moving freight.
+        BraneBridge builds automation for freight forwarders, so your ops team
+        can stop rekeying data and start moving freight.
       </p>
 
       <div className="mt-10">
