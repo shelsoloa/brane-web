@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Topbar } from "@/components/topbar";
+import { Footer } from "@/components/footer";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <div className="h-1 bg-primary" aria-hidden="true" />
         <Topbar />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>
