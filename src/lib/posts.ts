@@ -23,7 +23,7 @@ function normalizeMeta(data: Record<string, unknown>): PostMeta {
     data.date instanceof Date
       ? data.date.toISOString().slice(0, 10)
       : String(data.date);
-  return { ...(data as PostMeta), date };
+  return { ...(data as unknown as PostMeta), date };
 }
 
 export function getAllPosts(): PostMeta[] {
