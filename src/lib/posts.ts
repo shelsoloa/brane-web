@@ -18,12 +18,20 @@ export interface Post extends PostMeta {
 
 const contentDir = path.join(process.cwd(), "src/content");
 
+function normalizeMeta(data: Record<string, unknown>): PostMeta {
+  const date =
+    data.date instanceof Date
+      ? data.date.toISOString().slice(0, 10)
+      : String(data.date);
+  return { ...(data as PostMeta), date };
+}
+
 export function getAllPosts(): PostMeta[] {
   const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md"));
   const posts = files.map((filename) => {
     const raw = fs.readFileSync(path.join(contentDir, filename), "utf-8");
     const { data } = matter(raw);
-    return data as PostMeta;
+    return normalizeMeta(data);
   });
   return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
 }
@@ -39,7 +47,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     const { data, content } = matter(raw);
     if (data.slug === slug) {
       const result = await remark().use(html).process(content);
-      return { ...(data as PostMeta), contentHtml: result.toString() };
+      return { ...normalizeMeta(data), contentHtml: result.toString() };
     }
   }
   return null;
