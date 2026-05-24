@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog | BraneBridge",
   description:
-    "Technical writing on freight automation, customs classification, and building software for Canadian freight forwarders.",
+    "Technical writing from BraneBridge on GCP cost optimization, cloud engineering, and building production systems on Google Cloud.",
 };
 
 export default function Blog() {

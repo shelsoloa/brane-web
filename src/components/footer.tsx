@@ -38,9 +38,14 @@ export function Footer() {
 
         <hr className="my-8 border-white/10" />
 
-        <div className="flex items-center justify-between">
+        <p className="text-sm text-[#9ca3af]">
+          BraneBridge is an independent organization. Not affiliated with Google
+          Cloud.
+        </p>
+
+        <div className="mt-6 flex items-center justify-between">
           <p className="text-sm text-[#9ca3af]">
-            &copy; {new Date().getFullYear()} BraneBridge
+            &copy; 2026 BraneBridge. Toronto, ON, Canada.
           </p>
           <a
             href="https://www.linkedin.com/company/branebridge"

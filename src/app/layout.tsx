@@ -7,10 +7,24 @@ import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const TITLE = "BraneBridge — GCP Cost Optimization & Cloud Engineering";
+const DESCRIPTION =
+  "Cut your GCP bill 15% in 7 days or pay $0. BraneBridge provides cloud cost optimization and engineering for teams spending $20k+/mo on Google Cloud Platform.";
+
 export const metadata: Metadata = {
-  title: "BraneBridge | Back-Office Automation for Freight Forwarders",
-  description:
-    "BraneBridge builds automation for freight forwarding operations in Canada. Document processing, system integration, and workflow automation for mid-sized freight forwarders.",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "website",
+    url: "https://branebridge.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

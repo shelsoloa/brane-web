@@ -15,17 +15,29 @@ export function Topbar() {
 
         <div className="flex items-center gap-8 text-foreground">
           <a
-            href="/#what-we-do"
+            href="/#process"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
-            What We Do
+            How it works
           </a>
           <a
-            href="/#about"
+            href="/#pricing"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
-            About
+            Pricing
           </a>
+          <a
+            href="/#cases"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Case studies
+          </a>
+          <Link
+            href="/portfolio"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Portfolio
+          </Link>
           <Link
             href="/blog"
             className="text-sm font-medium hover:text-primary transition-colors"
@@ -33,7 +45,7 @@ export function Topbar() {
             Blog
           </Link>
           <Button asChild size="sm">
-            <a href="/#cta">Let&apos;s Talk</a>
+            <a href="/#cta">Get your report</a>
           </Button>
         </div>
       </div>
