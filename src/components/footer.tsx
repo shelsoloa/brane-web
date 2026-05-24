@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-[#111827] text-[#d1d5db] px-6 py-12">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between gap-8">
           <div>
             <BraneBridgeLogo width={140} height={35} />

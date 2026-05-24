@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SectionNav } from "@/components/section-nav";
 import Image from "next/image";
 
 const BOOKING_URL = "https://cal.com/branebridge/intro";
@@ -7,6 +8,7 @@ const BOOKING_URL = "https://cal.com/branebridge/intro";
 export default function Home() {
   return (
     <div>
+      <SectionNav />
       <Hero />
       <Process />
       <Methods />
@@ -34,8 +36,8 @@ function Section({
   className?: string;
 }) {
   return (
-    <section className={`px-6 py-16 sm:py-24 ${className ?? ""}`} id={id}>
-      <div className="max-w-3xl mx-auto">{children}</div>
+    <section className={`px-6 py-20 sm:py-28 ${className ?? ""}`} id={id}>
+      <div className="max-w-5xl mx-auto">{children}</div>
     </section>
   );
 }
@@ -46,12 +48,12 @@ function Section({
 
 function Hero() {
   return (
-    <Section className="bg-white pt-20 sm:pt-28 pb-16 sm:pb-24" id="hero">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#111111] leading-tight">
+    <Section className="bg-white pt-24 sm:pt-32 pb-20 sm:pb-28" id="hero">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#111111] leading-[1.05]">
         Cut your GCP bill 15% in 7 days. Or pay $0.
       </h1>
 
-      <p className="mt-6 text-lg sm:text-xl text-[#374151] leading-relaxed">
+      <p className="mt-8 text-xl sm:text-2xl text-[#374151] leading-relaxed max-w-3xl">
         BraneBridge runs cloud for teams spending $20k+/mo on Google Cloud
         Platform. Cost optimization, infrastructure, and engineering &mdash;
         without a retainer.
@@ -78,40 +80,40 @@ function Hero() {
 function Process() {
   return (
     <Section className="bg-[#1e293b]" id="process">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#e2e8f0] leading-snug">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#e2e8f0] leading-snug">
         How we work
       </h2>
-      <p className="mt-4 text-[#94a3b8] leading-relaxed">
+      <p className="mt-4 text-lg sm:text-xl text-[#94a3b8] leading-relaxed max-w-3xl">
         Three steps. No retainers. You only pay from verified savings on your
         bill.
       </p>
 
-      <div className="mt-12 space-y-10">
+      <div className="mt-14 grid gap-10 md:grid-cols-3">
         <div>
-          <p className="font-bold text-[#e2e8f0]">
+          <p className="text-lg font-bold text-[#e2e8f0]">
             Step 1 &mdash; 48-Hour Cost Leak Report
           </p>
-          <p className="mt-2 text-[#94a3b8] leading-relaxed">
+          <p className="mt-3 text-lg text-[#94a3b8] leading-[1.7]">
             Upload a billing export and get a one-page estimate (conservative /
             expected / aggressive) with your top 3 fixes by dollar impact.
           </p>
         </div>
 
         <div>
-          <p className="font-bold text-[#e2e8f0]">
+          <p className="text-lg font-bold text-[#e2e8f0]">
             Step 2 &mdash; 7-Day Read-Only Audit
           </p>
-          <p className="mt-2 text-[#94a3b8] leading-relaxed">
+          <p className="mt-3 text-lg text-[#94a3b8] leading-[1.7]">
             Under NDA and read-only IAM, we pinpoint leaks across your GCP
             environment and deliver a prioritized, measurable savings plan.
           </p>
         </div>
 
         <div>
-          <p className="font-bold text-[#e2e8f0]">
+          <p className="text-lg font-bold text-[#e2e8f0]">
             Step 3 &mdash; 30-Day Savings Plan &amp; Execution
           </p>
-          <p className="mt-2 text-[#94a3b8] leading-relaxed">
+          <p className="mt-3 text-lg text-[#94a3b8] leading-[1.7]">
             We implement with staged, monitored, rollback-ready changes, send
             weekly savings deltas, and you pay 25% of verified first-year
             savings &mdash; after it shows on your bill.
@@ -129,11 +131,11 @@ function Process() {
 function Methods() {
   return (
     <Section className="bg-white" id="methods">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111111] leading-snug">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111111] leading-snug">
         Why it works
       </h2>
 
-      <ul className="mt-10 space-y-4 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
+      <ul className="mt-12 grid gap-x-12 gap-y-5 sm:grid-cols-2 text-lg text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
         <li>Right-size autoscaling for spiky Cloud Run and GKE traffic</li>
         <li>
           Prune BigQuery scans (partitions, clustering, materialized views)
@@ -153,11 +155,11 @@ function Methods() {
 function Pricing() {
   return (
     <Section className="bg-[#1e293b]" id="pricing">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#e2e8f0] leading-snug">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#e2e8f0] leading-snug">
         Pricing &amp; guarantee
       </h2>
 
-      <div className="mt-8 space-y-5 text-[#cbd5e1] leading-[1.7]">
+      <div className="mt-8 space-y-5 text-lg sm:text-xl text-[#cbd5e1] leading-[1.7] max-w-3xl">
         <p>
           <span className="font-bold text-[#e2e8f0]">Pricing:</span>{" "}
           Savings-share only &mdash; 25% of verified first-year savings.
@@ -186,18 +188,18 @@ function Pricing() {
 function Cases() {
   return (
     <Section className="bg-white" id="cases">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111111] leading-snug">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111111] leading-snug">
         Case highlights
       </h2>
-      <p className="mt-4 text-[#374151] leading-relaxed">
+      <p className="mt-4 text-lg sm:text-xl text-[#374151] leading-relaxed max-w-3xl">
         Real engagements with spiky traffic and heavy analytics. Client names
         withheld; references available under NDA.
       </p>
 
-      <div className="mt-12 space-y-8">
+      <div className="mt-14 grid gap-8 md:grid-cols-2">
         <Card>
           <CardContent className="py-8">
-            <p className="font-bold text-[#0a0a0a]">
+            <p className="text-lg font-bold text-[#0a0a0a]">
               Case 1 &mdash; Spiky SaaS/IoT Workloads
             </p>
             <p className="mt-2 text-primary font-semibold">
@@ -239,7 +241,9 @@ function Cases() {
 
         <Card>
           <CardContent className="py-8">
-            <p className="font-bold text-[#0a0a0a]">Case 2 &mdash; Analytics / BI</p>
+            <p className="text-lg font-bold text-[#0a0a0a]">
+              Case 2 &mdash; Analytics / BI
+            </p>
             <p className="mt-2 text-primary font-semibold">
               ~$84K/yr saved. BigQuery spend down 70%.
             </p>
@@ -280,11 +284,11 @@ function Cases() {
 function Engineering() {
   return (
     <Section className="bg-[#f0f1f3]" id="engineering">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0a0a0a] leading-snug">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0a0a0a] leading-snug">
         Beyond cost optimization
       </h2>
 
-      <div className="mt-8 space-y-4 text-[#111111] leading-[1.7]">
+      <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
         <p>
           Cost work is the wedge, not the whole story. BraneBridge also takes on
           cloud engineering for early-stage and growth teams on GCP &mdash; MVP
@@ -298,7 +302,7 @@ function Engineering() {
         </p>
       </div>
 
-      <p className="mt-6 text-sm">
+      <p className="mt-8 text-lg">
         <a
           href="mailto:contact@branebridge.com?subject=Engineering%20engagement"
           className="text-primary font-medium hover:underline"
@@ -317,11 +321,11 @@ function Engineering() {
 function About() {
   return (
     <Section className="bg-white" id="about">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0a0a0a]">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0a0a0a]">
         Who&apos;s behind BraneBridge
       </h2>
 
-      <div className="mt-8 space-y-4 text-[#111111] leading-[1.7]">
+      <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
         <p>
           BraneBridge is founded and run by Sheldon Soloa, a senior cloud
           engineer with 10+ years of experience building and operating
@@ -349,13 +353,15 @@ function About() {
         <Image
           src="/images/sheldon-headshot.jpg"
           alt="Sheldon Soloa, Founder of BraneBridge"
-          width={120}
-          height={120}
+          width={140}
+          height={140}
           className="rounded-md flex-shrink-0"
         />
         <div>
-          <p className="font-bold text-[#0a0a0a]">Sheldon Soloa, Founder</p>
-          <p className="mt-1 text-[#111111] leading-[1.7]">
+          <p className="text-lg font-bold text-[#0a0a0a]">
+            Sheldon Soloa, Founder
+          </p>
+          <p className="mt-1 text-lg text-[#111111] leading-[1.7]">
             Senior cloud engineer. 10+ years building and operating production
             systems on GCP. Based in Toronto.
           </p>
@@ -399,15 +405,15 @@ function FAQ() {
 
   return (
     <Section className="bg-[#f0f1f3]" id="faq">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0a0a0a]">
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0a0a0a]">
         Frequently asked questions
       </h2>
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-12 grid gap-x-12 gap-y-8 sm:grid-cols-2">
         {faqs.map((item) => (
           <div key={item.q}>
-            <p className="font-bold text-[#0a0a0a]">{item.q}</p>
-            <p className="mt-2 text-[#111111] leading-[1.7]">{item.a}</p>
+            <p className="text-lg font-bold text-[#0a0a0a]">{item.q}</p>
+            <p className="mt-2 text-lg text-[#111111] leading-[1.7]">{item.a}</p>
           </div>
         ))}
       </div>
@@ -423,11 +429,11 @@ function CTA() {
   return (
     <Section className="bg-white" id="cta">
       <div className="text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#111111]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#111111]">
           Find your cost leaks.
         </h2>
 
-        <p className="mt-4 text-[#374151] leading-relaxed max-w-xl mx-auto">
+        <p className="mt-5 text-lg sm:text-xl text-[#374151] leading-relaxed max-w-2xl mx-auto">
           Spending $20k+/mo on Google Cloud Platform? Book a call and we&apos;ll
           start with a cost leak report. No system access needed.
         </p>
@@ -435,11 +441,7 @@ function CTA() {
         <Card className="mt-10 max-w-md mx-auto">
           <CardContent className="py-8 flex flex-col items-center gap-4">
             <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                 Get your cost leak report
               </a>
             </Button>
