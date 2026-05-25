@@ -56,8 +56,8 @@ function Hero() {
 
       <p className="mt-8 text-xl sm:text-2xl text-[#374151] leading-relaxed max-w-3xl">
         BraneBridge runs cloud for teams spending $20k+/mo on Google Cloud
-        Platform. Cost optimization, infrastructure, and engineering &mdash;
-        without a retainer.
+        Platform. Cost optimization, infrastructure, and engineering; without a
+        retainer.
       </p>
 
       <div className="mt-10">
@@ -249,7 +249,9 @@ function Cases() {
 
             <p className="mt-6 font-semibold text-[#0a0a0a]">What we changed</p>
             <ul className="mt-2 space-y-1.5 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
-              <li>Migrated service workloads from Cloud Functions to Cloud Run</li>
+              <li>
+                Migrated service workloads from Cloud Functions to Cloud Run
+              </li>
               <li>
                 Right-sized autoscaling and minimized cold start times for Cloud
                 Run services
@@ -373,11 +375,10 @@ function About() {
           production systems on GCP.
         </p>
         <p>
-          Most recently, Shel was one of three lead software engineers at OtO
-          Lawn Care from Series B through acquisition, owning the entire cloud
-          platform and personally optimizing more than $1.6M in cumulative GCP
-          spend across the engagement. The case study work above draws on
-          patterns developed there.
+          Most recently, Sheldon was a lead software engineer at OtO Lawn Care
+          from Series B through acquisition, owning the entire cloud
+          infrastructure and retrieved more than $1.6M in cumulative GCP spend
+          across the engagement.
         </p>
         <p>
           BraneBridge was originally launched in 2024 as a trade compliance
@@ -454,7 +455,9 @@ function FAQ() {
         {faqs.map((item) => (
           <div key={item.q}>
             <p className="text-lg font-bold text-[#0a0a0a]">{item.q}</p>
-            <p className="mt-2 text-lg text-[#111111] leading-[1.7]">{item.a}</p>
+            <p className="mt-2 text-lg text-[#111111] leading-[1.7]">
+              {item.a}
+            </p>
           </div>
         ))}
       </div>

@@ -37,18 +37,17 @@ export default function OtoCaseStudies() {
             >
               otolawn.com
             </a>
-            ) builds a smart, self-installing sprinkler that connects to a garden
-            hose and Wi-Fi to automate residential watering &mdash; a connected
-            hardware product with a companion app, a fleet of devices in the
-            field, and the telemetry that comes with both. The company is a
-            two-time CES Innovation Award winner.
+            ) builds a smart, self-installing sprinkler that connects to a
+            garden hose and Wi-Fi to automate residential watering &mdash; a
+            connected hardware product with a companion app, a fleet of devices
+            in the field, and the telemetry that comes with both. The company is
+            a two-time CES Innovation Award winner.
           </p>
           <p>
-            Sheldon Soloa, BraneBridge&apos;s founder, was one of three lead
-            software engineers at OtO from Series B through the company&apos;s
-            acquisition, owning the GCP environment and personally optimizing more
-            than $1.6M in cumulative cloud spend across the engagement. The two
-            case studies below come from that work.
+            Sheldon Soloa, BraneBridge&apos;s founder, was a lead software
+            engineers at OtO from Series B through the company&apos;s
+            acquisition, owning the cloud infrastructure and optimizing more
+            than $1.6M in cumulative cloud spend across the engagement.
           </p>
         </div>
 
@@ -62,7 +61,9 @@ export default function OtoCaseStudies() {
                 ~$525K/yr saved. Unit cost down 87%.
               </p>
 
-              <p className="mt-6 font-semibold text-[#0a0a0a]">What we changed</p>
+              <p className="mt-6 font-semibold text-[#0a0a0a]">
+                What we changed
+              </p>
               <ul className="mt-2 space-y-1.5 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
                 <li>
                   Migrated service workloads from Cloud Functions to Cloud Run
@@ -108,7 +109,9 @@ export default function OtoCaseStudies() {
                 ~$84K/yr saved. BigQuery spend down 70%.
               </p>
 
-              <p className="mt-6 font-semibold text-[#0a0a0a]">What we changed</p>
+              <p className="mt-6 font-semibold text-[#0a0a0a]">
+                What we changed
+              </p>
               <ul className="mt-2 space-y-1.5 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
                 <li>
                   Implemented medallion architecture with Dataform across 20+
@@ -123,8 +126,8 @@ export default function OtoCaseStudies() {
               </p>
               <p className="mt-2 text-[#1a1a1a] leading-[1.7]">
                 Month-over-month Cloud Billing export plus{" "}
-                <code className="text-sm">INFORMATION_SCHEMA.JOBS*</code> reports
-                to confirm bytes scanned and spend deltas.
+                <code className="text-sm">INFORMATION_SCHEMA.JOBS*</code>{" "}
+                reports to confirm bytes scanned and spend deltas.
               </p>
 
               <p className="mt-6 font-semibold text-[#0a0a0a]">Outcome</p>

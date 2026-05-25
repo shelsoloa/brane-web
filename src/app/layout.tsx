@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const TITLE = "BraneBridge — GCP Cost Optimization & Cloud Engineering";
+const TITLE = "BraneBridge | GCP Cost Optimization & Cloud Engineering";
 const DESCRIPTION =
   "Cut your GCP bill 15% in 7 days or pay $0. BraneBridge provides cloud cost optimization and engineering for teams spending $20k+/mo on Google Cloud Platform.";
 
