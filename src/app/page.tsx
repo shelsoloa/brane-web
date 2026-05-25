@@ -10,6 +10,7 @@ export default function Home() {
     <div>
       <SectionNav />
       <Hero />
+      <TrustStrip />
       <Process />
       <Methods />
       <Pricing />
@@ -70,6 +71,46 @@ function Hero() {
         </p>
       </div>
     </Section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Trust strip — thin band directly under the Hero                    */
+/* ------------------------------------------------------------------ */
+
+function TrustStrip() {
+  // Replace these wordmarks with real logo files when available, e.g.
+  // <Image src="/images/logos/yelp.svg" alt="Yelp" width={64} height={20} />
+  const companies = ["Yelp", "OtO", "Rainbird"];
+
+  return (
+    <section className="bg-[#f8f9fa] border-y border-[#e5e7eb] px-6 py-5">
+      <div className="max-w-5xl mx-auto flex flex-col gap-4 text-sm text-[#374151] lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <span>
+            <span className="font-bold text-primary">$1.6M+</span> saved
+          </span>
+          <span className="hidden h-4 w-px bg-[#d1d5db] sm:inline-block" />
+          <span>
+            <span className="font-bold text-primary">20+</span> production
+            services shipped
+          </span>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <span className="text-[#6b7280]">Worked with</span>
+          {companies.map((name) => (
+            <span
+              key={name}
+              className="font-semibold tracking-tight text-[#4b5563]"
+            >
+              {name}
+            </span>
+          ))}
+          <span className="text-[#6b7280]">and 10+ others</span>
+        </div>
+      </div>
+    </section>
   );
 }
 
