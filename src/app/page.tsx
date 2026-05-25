@@ -274,11 +274,14 @@ function Cases() {
             </p>
 
             <p className="mt-6 font-semibold text-[#0a0a0a]">Outcome</p>
-            <p className="mt-2 text-[#1a1a1a] leading-[1.7]">
-              Before &rarr; After: $6.00 &rarr; $0.75 per unit (~87&ndash;88%
-              reduction). Annualized savings ~$525K/yr. Fleet size doubled
-              during the engagement.
-            </p>
+            <ul className="mt-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
+              <li>
+                $6.00/unit/month reduced to $0.75/unit/month (~87&ndash;88%
+                reduction).
+              </li>
+              <li>Annualized savings ~$525K/yr.</li>
+              <li>Fleet size doubled during the engagement.</li>
+            </ul>
           </CardContent>
         </Card>
 
@@ -309,10 +312,13 @@ function Cases() {
             </p>
 
             <p className="mt-6 font-semibold text-[#0a0a0a]">Outcome</p>
-            <p className="mt-2 text-[#1a1a1a] leading-[1.7]">
-              BigQuery analysis spend $10K &rarr; $3K per month (~70%
-              reduction). Annualized savings ~$84K/yr.
-            </p>
+            <ul className="mt-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
+              <li>
+                BigQuery analysis spend $10K/month reduced to $3K/month (~70%
+                reduction).
+              </li>
+              <li>Annualized savings ~$84K/yr.</li>
+            </ul>
           </CardContent>
         </Card>
       </div>
