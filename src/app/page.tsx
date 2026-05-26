@@ -4,6 +4,7 @@ import { SectionNav } from "@/components/section-nav";
 import Image from "next/image";
 
 const BOOKING_URL = "https://cal.com/branebridge/intro";
+const COST_REPORT_URL = "/cost-report";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <Methods />
       <Pricing />
       <Cases />
-      <Engineering />
       <About />
+      <Engineering />
       <FAQ />
       <CTA />
     </div>
@@ -43,10 +44,6 @@ function Section({
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Section 1: Hero                                                    */
-/* ------------------------------------------------------------------ */
-
 function Hero() {
   return (
     <Section className="bg-white pt-24 sm:pt-32 pb-20 sm:pb-28" id="hero">
@@ -62,9 +59,7 @@ function Hero() {
 
       <div className="mt-10">
         <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Get your cost leak report
-          </a>
+          <a href={COST_REPORT_URL}>Get your cost leak report</a>
         </Button>
         <p className="mt-3 text-sm text-[#6b7280]">
           No system access needed for the initial report.
@@ -114,10 +109,6 @@ function TrustStrip() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Section 2: Process — dark background                               */
-/* ------------------------------------------------------------------ */
-
 function Process() {
   return (
     <Section className="bg-[#1e293b]" id="process">
@@ -165,10 +156,6 @@ function Process() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Section 3: Methods                                                 */
-/* ------------------------------------------------------------------ */
-
 function Methods() {
   return (
     <Section className="bg-white" id="methods">
@@ -188,10 +175,6 @@ function Methods() {
     </Section>
   );
 }
-
-/* ------------------------------------------------------------------ */
-/*  Section 4: Pricing & Guarantee — dark background                   */
-/* ------------------------------------------------------------------ */
 
 function Pricing() {
   return (
@@ -213,18 +196,12 @@ function Pricing() {
 
       <div className="mt-10">
         <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Get your cost leak report
-          </a>
+          <a href={COST_REPORT_URL}>Get your cost leak report</a>
         </Button>
       </div>
     </Section>
   );
 }
-
-/* ------------------------------------------------------------------ */
-/*  Section 5: Case Studies                                            */
-/* ------------------------------------------------------------------ */
 
 function Cases() {
   return (
@@ -326,10 +303,6 @@ function Cases() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Section 6: Secondary Offering — Cloud Engineering                  */
-/* ------------------------------------------------------------------ */
-
 function Engineering() {
   return (
     <Section className="bg-[#f0f1f3]" id="engineering">
@@ -362,10 +335,6 @@ function Engineering() {
     </Section>
   );
 }
-
-/* ------------------------------------------------------------------ */
-/*  Section 7: About / Founder                                         */
-/* ------------------------------------------------------------------ */
 
 function About() {
   return (
@@ -419,10 +388,6 @@ function About() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Section 8: FAQ                                                     */
-/* ------------------------------------------------------------------ */
-
 function FAQ() {
   const faqs = [
     {
@@ -471,10 +436,6 @@ function FAQ() {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Section 9: CTA — Contact                                           */
-/* ------------------------------------------------------------------ */
-
 function CTA() {
   return (
     <Section className="bg-white" id="cta">
@@ -491,16 +452,18 @@ function CTA() {
         <Card className="mt-10 max-w-md mx-auto">
           <CardContent className="py-8 flex flex-col items-center gap-4">
             <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                Get your cost leak report
-              </a>
+              <a href={COST_REPORT_URL}>Get your cost leak report</a>
             </Button>
 
             <p className="text-sm text-[#374151]">
-              Or email us at{" "}
-              <Button variant="link" asChild className="px-0 text-sm">
-                <a href="mailto:contact@branebridge.com">
-                  contact@branebridge.com
+              Prefer to talk first?{" "}
+              <Button
+                variant="link"
+                asChild
+                className="px-0 text-sm text-primary hover:text-primary/80"
+              >
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                  Book a call.
                 </a>
               </Button>
             </p>

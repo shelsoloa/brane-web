@@ -6,10 +6,7 @@ export function Topbar() {
   return (
     <div className="bg-background border-b border-border p-6">
       <div className="max-w-6xl mx-auto flex items-center justify-between sm:flex-row flex-col gap-4">
-        <Link
-          href="/"
-          className="hover:opacity-75 transition-all duration-300"
-        >
+        <Link href="/" className="hover:opacity-75 transition-all duration-300">
           <BraneBridgeLogo width={180} height={45} />
         </Link>
 
@@ -27,13 +24,7 @@ export function Topbar() {
             Blog
           </Link>
           <Button asChild>
-            <a
-              href="https://cal.com/branebridge/intro"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get your report
-            </a>
+            <a href="/cost-report">Get your report</a>
           </Button>
         </div>
       </div>
