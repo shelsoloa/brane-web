@@ -6,7 +6,7 @@ import { Inter, Oxanium } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/lib/utils";
 
-const oxanium = Oxanium({subsets:['latin'],variable:'--font-sans'});
+const oxanium = Oxanium({ subsets: ["latin"], variable: "--font-sans" });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.className, "font-sans", oxanium.variable)}>
+    <html
+      lang="en"
+      className={cn(oxanium.className, "font-sans", oxanium.variable)}
+    >
       <body>
         <div className="h-1 bg-primary" aria-hidden="true" />
         <Topbar />
