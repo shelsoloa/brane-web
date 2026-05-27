@@ -9,8 +9,8 @@ const sections = [
 
 export function SectionNav() {
   return (
-    <nav className="sticky top-0 z-30 bg-background border-b border-border">
-      <div className="max-w-5xl mx-auto px-6">
+    <nav className="sticky top-0 z-30 bg-background border-b border-border px-6">
+      <div className="max-w-5xl mx-auto ">
         <ul className="flex items-center gap-6 sm:gap-8 overflow-x-auto py-3.5 text-sm font-medium text-muted-foreground">
           {sections.map((s) => (
             <li key={s.href} className="whitespace-nowrap">

@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export function Topbar() {
   return (
     <div className="bg-background border-b border-border p-6">
-      <div className="max-w-6xl mx-auto flex items-center justify-between sm:flex-row flex-col gap-4">
+      <div className="max-w-5xl mx-auto flex items-center justify-between sm:flex-row flex-col gap-4">
         <Link href="/" className="hover:opacity-75 transition-all duration-300">
           <BraneBridgeLogo width={180} height={45} />
         </Link>
