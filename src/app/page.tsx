@@ -357,27 +357,26 @@ function About() {
 
       <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
         <p>
-          BraneBridge is founded and run by Sheldon Soloa, a cloud engineer with
-          10+ years of experience building and operating production systems on
-          GCP.
+          BraneBridge was founded and is run by Sheldon Soloa, a cloud engineer
+          with 10+ years of experience building and operating production systems
+          on GCP.
         </p>
         <p>
-          As a lead cloud engineer at Sheldon has led teams from Series B
-          through acquisition, and has{" "}
+          As a lead cloud engineer, Sheldon has led teams from Series B through
+          acquisition,{" "}
           <span className="font-bold text-primary">
-            saved companies more than $1.6M in cumulative GCP spend
+            saving companies more than $1.6M in cumulative GCP spend.
           </span>
         </p>
         <p>
-          BraneBridge was originally launched in 2024 as a trade compliance
-          tooling project. In 2025, BraneBridge pivoted to focus on what its
-          founder is best at and what the market has been asking for: GCP cost
-          optimization and cloud engineering.
+          BraneBridge launched in 2024 as a trade compliance service. The
+          company refocused in 2025 on providing GCP cost optimization and cloud
+          engineering to early &amp; growth stage startups.
         </p>
         <p>Based in Toronto, Ontario.</p>
       </div>
 
-      <div className="mt-12 flex flex-col sm:flex-row gap-6 items-start">
+      <div className="mt-12 flex flex-col sm:flex-row gap-6 items-end">
         <Image
           src="/images/sheldon-headshot.jpg"
           alt="Sheldon Soloa, Founder of BraneBridge"
@@ -386,12 +385,9 @@ function About() {
           className="rounded-md flex-shrink-0"
         />
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-bold text-[#0a0a0a]">
-            Sheldon Soloa, Founder
-          </p>
-          <p className="mt-1 text-lg text-[#111111] leading-[1.7]">
-            Senior cloud engineer. 10+ years building and operating production
-            systems on GCP.
+          <p className="text-lg font-bold text-[#0a0a0a]">Sheldon Soloa</p>
+          <p className="text-sm text-[#111111] leading-[1.7]">
+            Founder &amp; Principal Engineer
           </p>
           <div className="flex items-center gap-2">
             <a href="mailto:contact@branebridge.com">
@@ -460,7 +456,7 @@ function CTA() {
     <Section className="bg-white" id="cta">
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#111111]">
-          Find where you're burning spend
+          Find where you&apos;re burning spend
         </h2>
 
         <p className="mt-5 text-lg sm:text-xl text-[#374151] leading-relaxed max-w-2xl mx-auto">
