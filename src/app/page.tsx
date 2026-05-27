@@ -376,7 +376,7 @@ function About() {
         <p>Based in Toronto, Ontario.</p>
       </div>
 
-      <div className="mt-12 flex flex-col sm:flex-row gap-6 items-end">
+      <div className="mt-12 flex flex-col sm:flex-row gap-6 items-start sm:items-end">
         <Image
           src="/images/sheldon-headshot.jpg"
           alt="Sheldon Soloa, Founder of BraneBridge"
