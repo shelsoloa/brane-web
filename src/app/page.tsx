@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardTitle,
+  CardHeader,
+  CardDescription,
+} from "@/components/ui/card";
 import { SectionNav } from "@/components/section-nav";
 import Image from "next/image";
+import { Linkedin, Mail } from "lucide-react";
 
 const BOOKING_URL = "https://cal.com/branebridge/intro";
 const COST_REPORT_URL = "/cost-report";
@@ -121,36 +128,41 @@ function Process() {
       </p>
 
       <div className="mt-14 grid gap-10 md:grid-cols-3">
-        <div>
-          <p className="text-lg font-bold text-[#e2e8f0]">
-            Step 1 &mdash; 48-Hour Cost Leak Report
-          </p>
-          <p className="mt-3 text-lg text-[#94a3b8] leading-[1.7]">
+        <Card className="bg-[#1e293b] border-2 border-b-8 border-primary">
+          <CardHeader>
+            <CardTitle className="text-lg font-bold text-[#e2e8f0]">
+              1. 48-Hour Cost Leak Report
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-[#94a3b8] leading-[1.7]">
             Upload a billing export and get a one-page estimate (conservative /
             expected / aggressive) with your top 3 fixes by dollar impact.
-          </p>
-        </div>
-
-        <div>
-          <p className="text-lg font-bold text-[#e2e8f0]">
-            Step 2 &mdash; 7-Day Read-Only Audit
-          </p>
-          <p className="mt-3 text-lg text-[#94a3b8] leading-[1.7]">
+          </CardContent>
+        </Card>
+        <Card className="bg-[#1e293b] border-2 border-b-8 border-primary">
+          <CardHeader>
+            <CardTitle className="text-lg font-bold text-[#e2e8f0]">
+              2. 7-Day Read-Only Audit
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-[#94a3b8] leading-[1.7]">
             Under NDA and read-only IAM, we pinpoint leaks across your GCP
             environment and deliver a prioritized, measurable savings plan.
-          </p>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div>
-          <p className="text-lg font-bold text-[#e2e8f0]">
-            Step 3 &mdash; 30-Day Savings Plan &amp; Execution
-          </p>
-          <p className="mt-3 text-lg text-[#94a3b8] leading-[1.7]">
+        <Card className="bg-[#1e293b] border-2 border-b-8 border-primary">
+          <CardHeader>
+            <CardTitle className="text-lg font-bold text-[#e2e8f0]">
+              3. 30-Day Savings Plan &amp; Execution
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-lg text-[#94a3b8] leading-[1.7]">
             We implement with staged, monitored, rollback-ready changes, send
             weekly savings deltas, and you pay 25% of verified first-year
-            savings &mdash; after it shows on your bill.
-          </p>
-        </div>
+            savings only after it shows on your bill.
+          </CardContent>
+        </Card>
       </div>
     </Section>
   );
@@ -345,23 +357,22 @@ function About() {
 
       <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
         <p>
-          BraneBridge is founded and run by Sheldon Soloa, a senior cloud
-          engineer with 10+ years of experience building and operating
-          production systems on GCP.
+          BraneBridge is founded and run by Sheldon Soloa, a cloud engineer with
+          10+ years of experience building and operating production systems on
+          GCP.
         </p>
         <p>
-          Most recently, Sheldon was a lead software engineer at OtO Lawn Care
-          from Series B through acquisition, owning the entire cloud
-          infrastructure and retrieved more than $1.6M in cumulative GCP spend
-          across the engagement.
+          As a lead cloud engineer at Sheldon has led teams from Series B
+          through acquisition, and has{" "}
+          <span className="font-bold text-primary">
+            saved companies more than $1.6M in cumulative GCP spend
+          </span>
         </p>
         <p>
           BraneBridge was originally launched in 2024 as a trade compliance
-          tooling project. brane-classify, the HS tariff classification API
-          built during that period, remains live as a production portfolio
-          piece. In 2025, BraneBridge pivoted to focus on what its founder is
-          best at and what the market has been asking for: GCP cost optimization
-          and cloud engineering.
+          tooling project. In 2025, BraneBridge pivoted to focus on what its
+          founder is best at and what the market has been asking for: GCP cost
+          optimization and cloud engineering.
         </p>
         <p>Based in Toronto, Ontario.</p>
       </div>
@@ -374,14 +385,22 @@ function About() {
           height={140}
           className="rounded-md flex-shrink-0"
         />
-        <div>
+        <div className="flex flex-col gap-2">
           <p className="text-lg font-bold text-[#0a0a0a]">
             Sheldon Soloa, Founder
           </p>
           <p className="mt-1 text-lg text-[#111111] leading-[1.7]">
             Senior cloud engineer. 10+ years building and operating production
-            systems on GCP. Based in Toronto.
+            systems on GCP.
           </p>
+          <div className="flex items-center gap-2">
+            <a href="mailto:contact@branebridge.com">
+              <Mail className="w-4 h-4" />
+            </a>
+            <a href="https://www.linkedin.com/in/sheldon-soloa/">
+              <Linkedin className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </div>
     </Section>
@@ -441,7 +460,7 @@ function CTA() {
     <Section className="bg-white" id="cta">
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#111111]">
-          Find your cost leaks.
+          Find where you're burning spend
         </h2>
 
         <p className="mt-5 text-lg sm:text-xl text-[#374151] leading-relaxed max-w-2xl mx-auto">
