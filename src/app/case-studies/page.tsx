@@ -5,8 +5,37 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case Studies | BraneBridge",
   description:
-    "Selected case studies from BraneBridge: GCP cost optimization at OtO Lawn Care, the PromoExchange creator marketplace, and brane-classify, a production HS tariff classification API on GCP.",
+    "Selected case studies from BraneBridge: GCP cost optimization, infrastructure management, and product development.",
 };
+
+function PortfolioItem({
+  title,
+  subheader,
+  description,
+  link,
+}: {
+  title: string;
+  subheader: string;
+  description: string;
+  link: string;
+}) {
+  return (
+    <Link href={link} className="group block">
+      <Card className="h-full transition-colors group-hover:border-primary">
+        <CardContent className="py-8">
+          <p className="text-lg font-bold text-[#0a0a0a] group-hover:text-primary transition-colors">
+            {title}
+          </p>
+          <p className="mt-2 text-primary font-semibold">{subheader}</p>
+          <p className="mt-3 text-[#374151] leading-[1.7]">{description}</p>
+          <p className="mt-4 text-sm font-medium text-primary">
+            Read more &rarr;
+          </p>
+        </CardContent>
+      </Card>
+    </Link>
+  );
+}
 
 export default function CaseStudies() {
   return (
@@ -20,62 +49,33 @@ export default function CaseStudies() {
         </p>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <Link href="/case-studies/oto" className="group block">
-            <Card className="h-full transition-colors group-hover:border-primary">
-              <CardContent className="py-8">
-                <p className="text-lg font-bold text-[#0a0a0a] group-hover:text-primary transition-colors">
-                  OtO Lawn Care
-                </p>
-                <p className="mt-2 text-primary font-semibold">
-                  ~$609K/yr saved across two GCP engagements
-                </p>
-                <p className="mt-3 text-[#374151] leading-[1.7]">
-                  Cloud cost optimization for a smart-sprinkler hardware
-                  company, from Series B through acquisition. Two case studies:
-                  spiky SaaS/IoT workloads and analytics/BI.
-                </p>
-                <p className="mt-4 text-sm font-medium text-primary">
-                  Read the case studies &rarr;
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
+          <PortfolioItem
+            title="OtO Lawn Care (acquired by Rain Bird)"
+            subheader="~$609K/yr saved across two GCP engagements"
+            description="Cloud cost optimization for a smart-sprinkler hardware company, from Series B through acquisition. Two case studies: spiky SaaS/IoT workloads and analytics/BI."
+            link="/case-studies/oto"
+          />
 
-          <Link href="/case-studies/promoexchange" className="group block">
-            <Card className="h-full transition-colors group-hover:border-primary">
-              <CardContent className="py-8">
-                <p className="text-lg font-bold text-[#0a0a0a] group-hover:text-primary transition-colors">
-                  PromoExchange
-                </p>
-                <p className="mt-2 text-primary font-semibold">
-                  Founder &amp; sole engineer
-                </p>
-                <p className="mt-3 text-[#374151] leading-[1.7]">
-                  A marketplace where social media creators sell promotions to
-                  businesses, with Stripe escrow holding funds until delivery.
-                  Designed, built, and shipped solo.
-                </p>
-                <p className="mt-4 text-sm font-medium text-primary">
-                  Read more &rarr;
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
-        </div>
+          <PortfolioItem
+            title="PromoExchange"
+            subheader="Product, frontend, backend, payments, and infrastructure"
+            description="A marketplace where social media creators sell promotions to businesses, with Stripe escrow holding funds until delivery. Designed, built, and shipped."
+            link="/case-studies/promoexchange"
+          />
 
-        <div className="mt-8">
-          <Card>
-            <CardContent className="py-8">
-              <p className="text-lg font-bold text-[#0a0a0a]">brane-classify</p>
-              <p className="mt-3 text-lg text-[#111111] leading-[1.7]">
-                Production HS tariff classification API. Two-stage LLM pipeline
-                (Anthropic SDK, FastAPI, GCP Cloud Run, Supabase) for Canadian
-                customs tariff classification. Built 2024&ndash;2025 as the core
-                product of BraneBridge&apos;s original trade compliance focus;
-                remains live as a case study.
-              </p>
-            </CardContent>
-          </Card>
+          <PortfolioItem
+            title="Tachyon"
+            subheader="Built &amp; deployed Ex&sup2;"
+            description="An edtech matching service connecting accredited academic professionals with researchers seeking assistance, with an AI evaluation tool. MVP built, deployed, and operated."
+            link="/case-studies/tachyon"
+          />
+
+          <PortfolioItem
+            title="brane-classify"
+            subheader="Production HS tariff classification API"
+            description="A two-stage LLM pipeline (Anthropic SDK, FastAPI, GCP Cloud Run, Supabase) for Canadian customs tariff classification. Built 2024&ndash;2025 as the core product of BraneBridge's original trade compliance focus; remains live as a case study."
+            link="#"
+          />
         </div>
       </div>
     </section>
