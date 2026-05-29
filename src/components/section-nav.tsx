@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const sections = [
   { label: "How it works", href: "#process" },
   { label: "Pricing", href: "#pricing" },
@@ -14,9 +16,12 @@ export function SectionNav() {
         <ul className="flex items-center gap-6 sm:gap-8 overflow-x-auto py-3.5 text-sm font-medium text-muted-foreground">
           {sections.map((s) => (
             <li key={s.href} className="whitespace-nowrap">
-              <a href={s.href} className="hover:text-primary transition-colors">
+              <Link
+                href={s.href}
+                className="hover:text-primary transition-colors"
+              >
                 {s.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

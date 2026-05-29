@@ -18,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 
 const SPEND_OPTIONS = [
   { value: "<20", label: "Less than $20k / month" },
@@ -115,14 +116,12 @@ export function RequestCostLeakReportForm() {
           />
           <FieldDescription>
             Don&apos;t have this handy? You can send it after.{" "}
-            <a
-              href="https://branebridge.com/how-to-pull-a-gcp-billing-export"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/docs/how-to-pull-gcp-billing-export"
               className="hover:underline"
             >
               Here&apos;s how to pull it &rarr;
-            </a>
+            </Link>
           </FieldDescription>
         </Field>
 
