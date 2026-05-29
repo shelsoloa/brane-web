@@ -3,24 +3,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio | BraneBridge",
+  title: "Case Studies | BraneBridge",
   description:
-    "Selected work from BraneBridge: GCP cost optimization at OtO Lawn Care, the PromoExchange creator marketplace, and brane-classify, a production HS tariff classification API on GCP.",
+    "Selected case studies from BraneBridge: GCP cost optimization at OtO Lawn Care, the PromoExchange creator marketplace, and brane-classify, a production HS tariff classification API on GCP.",
 };
 
-export default function Portfolio() {
+export default function CaseStudies() {
   return (
     <section className="px-6 py-20 sm:py-28 bg-white">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#111111] leading-[1.05]">
-          Portfolio
+          Case Studies
         </h1>
         <p className="mt-6 text-xl sm:text-2xl text-[#374151] leading-relaxed max-w-3xl">
           Production systems built and operated by BraneBridge.
         </p>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <Link href="/portfolio/oto" className="group block">
+          <Link href="/case-studies/oto" className="group block">
             <Card className="h-full transition-colors group-hover:border-primary">
               <CardContent className="py-8">
                 <p className="text-lg font-bold text-[#0a0a0a] group-hover:text-primary transition-colors">
@@ -30,9 +30,9 @@ export default function Portfolio() {
                   ~$609K/yr saved across two GCP engagements
                 </p>
                 <p className="mt-3 text-[#374151] leading-[1.7]">
-                  Cloud cost optimization for a smart-sprinkler hardware company,
-                  from Series B through acquisition. Two case studies: spiky
-                  SaaS/IoT workloads and analytics/BI.
+                  Cloud cost optimization for a smart-sprinkler hardware
+                  company, from Series B through acquisition. Two case studies:
+                  spiky SaaS/IoT workloads and analytics/BI.
                 </p>
                 <p className="mt-4 text-sm font-medium text-primary">
                   Read the case studies &rarr;
@@ -41,7 +41,7 @@ export default function Portfolio() {
             </Card>
           </Link>
 
-          <Link href="/portfolio/promoexchange" className="group block">
+          <Link href="/case-studies/promoexchange" className="group block">
             <Card className="h-full transition-colors group-hover:border-primary">
               <CardContent className="py-8">
                 <p className="text-lg font-bold text-[#0a0a0a] group-hover:text-primary transition-colors">
@@ -72,7 +72,7 @@ export default function Portfolio() {
                 (Anthropic SDK, FastAPI, GCP Cloud Run, Supabase) for Canadian
                 customs tariff classification. Built 2024&ndash;2025 as the core
                 product of BraneBridge&apos;s original trade compliance focus;
-                remains live as a portfolio piece.
+                remains live as a case study.
               </p>
             </CardContent>
           </Card>

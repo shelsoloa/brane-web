@@ -3,20 +3,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PromoExchange | BraneBridge Portfolio",
+  title: "PromoExchange | BraneBridge Case Study",
   description:
     "PromoExchange (promoexchange.io) is a marketplace where social media creators sell promotions to businesses, with Stripe escrow payments. Designed, built, and shipped solo by BraneBridge's founder.",
 };
 
-export default function PromoExchange() {
+export default function PromoExchangeCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
       <div className="max-w-5xl mx-auto">
         <Link
-          href="/portfolio"
+          href="/case-studies"
           className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
-          &larr; Back to portfolio
+          &larr; Back to case studies
         </Link>
 
         <h1 className="mt-8 text-4xl sm:text-5xl font-bold tracking-tight text-[#111111] leading-[1.05]">
@@ -73,7 +73,9 @@ export default function PromoExchange() {
 
           <Card>
             <CardContent className="py-7">
-              <p className="font-semibold text-[#0a0a0a]">How it&apos;s built</p>
+              <p className="font-semibold text-[#0a0a0a]">
+                How it&apos;s built
+              </p>
               <ul className="mt-3 space-y-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
                 <li>Next.js / React frontend and API routes, TypeScript</li>
                 <li>

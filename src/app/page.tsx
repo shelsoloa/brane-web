@@ -9,6 +9,7 @@ import {
 import { SectionNav } from "@/components/section-nav";
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 const BOOKING_URL = "https://cal.com/branebridge/intro";
 const COST_REPORT_URL = "/cost-report";
@@ -66,7 +67,7 @@ function Hero() {
 
       <div className="mt-10">
         <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-          <a href={COST_REPORT_URL}>Get your cost leak report</a>
+          <Link href={COST_REPORT_URL}>Get your cost leak report</Link>
         </Button>
         <p className="mt-3 text-sm text-[#6b7280]">
           No system access needed for the initial report.
@@ -208,7 +209,7 @@ function Pricing() {
 
       <div className="mt-10">
         <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-          <a href={COST_REPORT_URL}>Get your cost leak report</a>
+          <Link href={COST_REPORT_URL}>Get your cost leak report</Link>
         </Button>
       </div>
     </Section>
@@ -311,6 +312,13 @@ function Cases() {
           </CardContent>
         </Card>
       </div>
+
+      <Link
+        href="/case-studies"
+        className="mt-8 text-lg text-primary font-medium hover:underline block float-right"
+      >
+        Read more case studies &rarr;
+      </Link>
     </Section>
   );
 }
@@ -467,7 +475,7 @@ function CTA() {
         <Card className="mt-10 max-w-md mx-auto">
           <CardContent className="py-8 flex flex-col items-center gap-4">
             <Button size="lg" asChild className="text-base px-8 py-3 h-auto">
-              <a href={COST_REPORT_URL}>Get your cost leak report</a>
+              <Link href={COST_REPORT_URL}>Get your cost leak report</Link>
             </Button>
 
             <p className="text-sm text-[#374151]">
@@ -477,9 +485,13 @@ function CTA() {
                 asChild
                 className="px-0 text-sm text-primary hover:text-primary/80"
               >
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Book a call.
-                </a>
+                </Link>
               </Button>
             </p>
           </CardContent>

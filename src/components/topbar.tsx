@@ -1,6 +1,21 @@
 import Link from "next/link";
 import { BraneBridgeLogo } from "./logo";
 import { Button } from "./ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "./ui/navigation-menu";
+
+const resources = [
+  { label: "Blog", href: "/blog" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Docs", href: "/docs" },
+];
 
 export function Topbar() {
   return (
@@ -10,23 +25,39 @@ export function Topbar() {
           <BraneBridgeLogo width={180} height={45} />
         </Link>
 
-        <div className="flex items-center gap-8 text-foreground">
-          <Link
-            href="/portfolio"
-            className="text-base font-medium hover:text-primary transition-colors"
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/blog"
-            className="text-base font-medium hover:text-primary transition-colors"
-          >
-            Blog
-          </Link>
-          <Button asChild>
-            <a href="/cost-report">Get your report</a>
-          </Button>
-        </div>
+        <NavigationMenu className="text-black">
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-48 gap-1">
+                  {resources.map((resource) => (
+                    <li key={resource.href}>
+                      <NavigationMenuLink asChild>
+                        <Link href={resource.href}>{resource.label}</Link>
+                      </NavigationMenuLink>
+                    </li>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="#">Clients</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Button asChild>
+                <Link href="/cost-report">Get your Report</Link>
+              </Button>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
     </div>
   );

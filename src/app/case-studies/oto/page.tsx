@@ -3,20 +3,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OtO Lawn Care | BraneBridge Portfolio",
+  title: "OtO Lawn Care | BraneBridge Case Study",
   description:
     "Two GCP cost optimization case studies from OtO Lawn Care: ~$525K/yr saved on spiky SaaS/IoT workloads and ~$84K/yr saved on analytics/BI, from Series B through acquisition.",
 };
 
-export default function OtoCaseStudies() {
+export default function OtoCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
       <div className="max-w-5xl mx-auto">
         <Link
-          href="/portfolio"
+          href="/case-studies"
           className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
-          &larr; Back to portfolio
+          &larr; Back to case studies
         </Link>
 
         <h1 className="mt-8 text-4xl sm:text-5xl font-bold tracking-tight text-[#111111] leading-[1.05]">
