@@ -13,6 +13,8 @@ import Link from "next/link";
 
 const BOOKING_URL = "https://cal.com/branebridge/intro";
 const COST_REPORT_URL = "/cost-report";
+const ENGINEERING_MAILTO =
+  "mailto:contact@branebridge.com?subject=Engineering%20engagement";
 
 export default function Home() {
   return (
@@ -72,6 +74,16 @@ function Hero() {
         <p className="mt-3 text-sm text-[#6b7280]">
           No system access needed for the initial report.
         </p>
+        <p className="mt-6 text-base text-[#374151] leading-relaxed max-w-2xl">
+          Earlier stage, or under $20k/mo? We also build and run GCP
+          infrastructure for seed-to-growth teams.{" "}
+          <a
+            href={ENGINEERING_MAILTO}
+            className="text-primary font-medium hover:underline"
+          >
+            Talk to us &rarr;
+          </a>
+        </p>
       </div>
     </Section>
   );
@@ -84,14 +96,15 @@ function Hero() {
 function TrustStrip() {
   // Replace these wordmarks with real logo files when available, e.g.
   // <Image src="/images/logos/yelp.svg" alt="Yelp" width={64} height={20} />
-  const companies = ["Yelp", "OtO", "Rainbird"];
+  const companies = ["Yelp", "OtO (acq. Rain Bird)"];
 
   return (
     <section className="bg-[#f8f9fa] border-y border-[#e5e7eb] px-6 py-5">
       <div className="max-w-5xl mx-auto flex flex-col gap-4 text-sm text-[#374151] lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <span>
-            <span className="font-bold text-primary">$1.6M+</span> saved
+            <span className="font-bold text-primary">$1.6M+</span> saved &mdash;
+            runway extended without new hires
           </span>
           <span className="hidden h-4 w-px bg-[#d1d5db] sm:inline-block" />
           <span>
@@ -223,8 +236,9 @@ function Cases() {
         Case highlights
       </h2>
       <p className="mt-4 text-lg sm:text-xl text-[#374151] leading-relaxed max-w-3xl">
-        Real engagements with spiky traffic and heavy analytics. Client names
-        withheld; references available under NDA.
+        Two GCP engagements at OtO Lawn Care (acquired by Rain Bird), from
+        Series B through acquisition &mdash; spiky SaaS/IoT traffic and heavy
+        analytics.
       </p>
 
       <div className="mt-14 grid gap-8 md:grid-cols-2">
@@ -339,6 +353,12 @@ function Engineering() {
           savings-share audit.
         </p>
         <p>
+          After the audit, some teams have us stay on to run their GCP
+          day-to-day &mdash; monitoring, releases, and cost discipline &mdash; so
+          they don&apos;t have to hire a cloud engineer before they need one.
+          That&apos;s scoped separately from the no-retainer savings work.
+        </p>
+        <p>
           If you&apos;re past prototype and want your GCP stack built the way it
           would be at a mature engineering org, we can help.
         </p>
@@ -406,6 +426,19 @@ function About() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="mt-12 border-l-2 border-primary pl-5 max-w-3xl">
+        <p className="text-lg text-[#111111] leading-[1.7]">
+          <span className="font-bold">Investors:</span> we help portfolio
+          companies extend runway without growing the engineering team.{" "}
+          <a
+            href={ENGINEERING_MAILTO}
+            className="text-primary font-medium hover:underline"
+          >
+            Intro us to a company &rarr;
+          </a>
+        </p>
       </div>
     </Section>
   );
