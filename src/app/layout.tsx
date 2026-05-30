@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Topbar } from "@/components/topbar";
 import { Footer } from "@/components/footer";
 import { Inter, Oxanium } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/lib/utils";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
       </body>
+      <GoogleAnalytics gaId="G-3P08VK8D34" />
     </html>
   );
 }
