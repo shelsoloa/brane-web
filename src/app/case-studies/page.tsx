@@ -71,6 +71,13 @@ export default function CaseStudies() {
           />
 
           <PortfolioItem
+            title="Gabzebo"
+            subheader="$200K+ in new business engagements"
+            description="Device application, media processing pipelines, and a WYSIWYG editor for an interactive video booth media company. Rebuilt the database and telemetry; migrated SQLite to PostgreSQL on GCP."
+            link="/case-studies/gabzebo"
+          />
+
+          <PortfolioItem
             title="brane-classify"
             subheader="Production HS tariff classification API"
             description="A two-stage LLM pipeline (Anthropic SDK, FastAPI, GCP Cloud Run, Supabase) for Canadian customs tariff classification. Built 2024&ndash;2025 as the core product of BraneBridge's original trade compliance focus; remains live as a case study."

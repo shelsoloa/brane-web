@@ -78,12 +78,10 @@ export default function PromoExchangeCaseStudy() {
               </p>
               <ul className="mt-3 space-y-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
                 <li>Next.js / React frontend and API routes, TypeScript</li>
+                <li>Supabase for database and authentication</li>
+                <li>GCP for hosting and infrastructure</li>
                 <li>
                   Stripe for escrow, payouts, subscriptions, and fee collection
-                </li>
-                <li>
-                  Built and operated by one engineer, from first commit to
-                  production
                 </li>
               </ul>
             </CardContent>
