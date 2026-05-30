@@ -10,15 +10,73 @@ import { SectionNav } from "@/components/section-nav";
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { JsonLd, ORGANIZATION_ID } from "@/components/json-ld";
 
 const BOOKING_URL = "https://cal.com/branebridge/intro";
 const COST_REPORT_URL = "/cost-report";
 const ENGINEERING_MAILTO =
   "mailto:contact@branebridge.com?subject=Engineering%20engagement";
 
+const faqs = [
+  {
+    q: "Will this hurt performance?",
+    a: "No. We stage, test, and monitor every change with rollback ready.",
+  },
+  {
+    q: "How does access work?",
+    a: "Read-only IAM under mutual NDA for the 7-day audit. Revoke anytime. Implementation is gated and reviewed.",
+  },
+  {
+    q: "Do you need production access?",
+    a: "Read-only for the audit. Implementation goes through PRs and IaC where possible.",
+  },
+  {
+    q: "Do you cover AWS?",
+    a: "GCP first. AWS coming.",
+  },
+  {
+    q: "Can legal sign an NDA?",
+    a: "Yes. Yours or ours.",
+  },
+  {
+    q: "What if you don't find 15% in savings?",
+    a: "You pay $0.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "GCP Cost Optimization",
+  serviceType: "Cloud cost optimization",
+  provider: { "@id": ORGANIZATION_ID },
+  areaServed: [
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "United States" },
+  ],
+  description:
+    "Savings-share GCP cost optimization for teams spending $20k+/mo on Google Cloud. Pay 25% of verified first-year savings — if we don't identify at least 15% in savings, you pay $0.",
+  offers: {
+    "@type": "Offer",
+    description: "25% of verified first-year savings. No retainer.",
+  },
+};
+
 export default function Home() {
   return (
     <div>
+      <JsonLd data={faqSchema} />
+      <JsonLd data={serviceSchema} />
       <SectionNav />
       <Hero />
       <TrustStrip />
@@ -445,33 +503,6 @@ function About() {
 }
 
 function FAQ() {
-  const faqs = [
-    {
-      q: "Will this hurt performance?",
-      a: "No. We stage, test, and monitor every change with rollback ready.",
-    },
-    {
-      q: "How does access work?",
-      a: "Read-only IAM under mutual NDA for the 7-day audit. Revoke anytime. Implementation is gated and reviewed.",
-    },
-    {
-      q: "Do you need production access?",
-      a: "Read-only for the audit. Implementation goes through PRs and IaC where possible.",
-    },
-    {
-      q: "Do you cover AWS?",
-      a: "GCP first. AWS coming.",
-    },
-    {
-      q: "Can legal sign an NDA?",
-      a: "Yes. Yours or ours.",
-    },
-    {
-      q: "What if you don't find 15% in savings?",
-      a: "You pay $0.",
-    },
-  ];
-
   return (
     <Section className="bg-[#f0f1f3]" id="faq">
       <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0a0a0a]">

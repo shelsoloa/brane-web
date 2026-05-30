@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Case Studies | BraneBridge",
   description:
     "How BraneBridge cuts GCP bills for seed-to-growth companies, keeps the infrastructure running, and ships production software — with the savings numbers to back it up.",
+  alternates: { canonical: "/case-studies" },
 };
 
 function PortfolioItem({

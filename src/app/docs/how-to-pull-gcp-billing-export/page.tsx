@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
+import { JsonLd, breadcrumbList } from "@/components/json-ld";
 
 export const metadata: Metadata = {
   title: "How to pull a GCP Billing Export | BraneBridge",
   description:
     "Step-by-step guide to enabling detailed Cloud Billing export to BigQuery so BraneBridge can analyze your GCP spend.",
+  alternates: { canonical: "/docs/how-to-pull-gcp-billing-export" },
 };
 
 export default function HowToPullGcpBillingExport() {
   return (
     <article>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Docs", path: "/docs" },
+          {
+            name: "How to pull a GCP Billing Export",
+            path: "/docs/how-to-pull-gcp-billing-export",
+          },
+        ])}
+      />
       <h1 className="text-4xl font-bold tracking-tight text-[#111111]">
         How to pull a GCP Billing Export
       </h1>

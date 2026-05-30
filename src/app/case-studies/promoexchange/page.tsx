@@ -1,17 +1,32 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { CaseStudyCTA } from "@/components/case-study-cta";
+import { JsonLd, breadcrumbList } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "PromoExchange | BraneBridge Case Study",
   description:
     "PromoExchange (promoexchange.io) is a marketplace where social media creators sell promotions to businesses, with Stripe escrow payments. Designed, built, and shipped solo by BraneBridge's founder.",
+  alternates: { canonical: "/case-studies/promoexchange" },
+  openGraph: {
+    title: "PromoExchange | BraneBridge Case Study",
+    description:
+      "A full payments marketplace with Stripe escrow — designed, built, and shipped by one engineer.",
+    type: "article",
+    url: "/case-studies/promoexchange",
+  },
 };
 
 export default function PromoExchangeCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Case Studies", path: "/case-studies" },
+          { name: "PromoExchange", path: "/case-studies/promoexchange" },
+        ])}
+      />
       <div className="max-w-5xl mx-auto">
         <Link
           href="/case-studies"

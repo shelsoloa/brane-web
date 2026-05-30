@@ -1,17 +1,32 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { CaseStudyCTA } from "@/components/case-study-cta";
+import { JsonLd, breadcrumbList } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Tachyon | BraneBridge Case Study",
   description:
     "BraneBridge built Ex² (exsquared.io) for Tachyon — an edtech matching service connecting accredited academic professionals with researchers seeking assistance. MVP development, deployment, and infrastructure management.",
+  alternates: { canonical: "/case-studies/tachyon" },
+  openGraph: {
+    title: "Tachyon | BraneBridge Case Study",
+    description:
+      "Built and deployed Ex² — an edtech matching service — from MVP through production on GCP.",
+    type: "article",
+    url: "/case-studies/tachyon",
+  },
 };
 
 export default function TachyonCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Case Studies", path: "/case-studies" },
+          { name: "Tachyon", path: "/case-studies/tachyon" },
+        ])}
+      />
       <div className="max-w-5xl mx-auto">
         <Link
           href="/case-studies"

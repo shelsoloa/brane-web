@@ -2,6 +2,9 @@ import Link from "next/link";
 import { getAllSlugs, getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { JsonLd, ORGANIZATION_ID, breadcrumbList } from "@/components/json-ld";
+
+const BASE_URL = "https://branebridge.com";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -14,9 +17,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
   if (!post) return {};
+  const url = `/blog/${post.slug}`;
   return {
     title: `${post.title} | BraneBridge`,
     description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url,
+      publishedTime: post.date,
+      authors: [post.author],
+    },
   };
 }
 
@@ -28,8 +41,28 @@ export default async function BlogPost({
   const post = await getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { "@type": "Person", name: post.author },
+    publisher: { "@id": ORGANIZATION_ID },
+    mainEntityOfPage: `${BASE_URL}/blog/${post.slug}`,
+    image: `${BASE_URL}/opengraph-image`,
+  };
+
+  const breadcrumbSchema = breadcrumbList([
+    { name: "Blog", path: "/blog" },
+    { name: post.title, path: `/blog/${post.slug}` },
+  ]);
+
   return (
     <section className="px-6 py-16 sm:py-24">
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="max-w-3xl mx-auto">
         <Link
           href="/blog"

@@ -1,17 +1,32 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { CaseStudyCTA } from "@/components/case-study-cta";
+import { JsonLd, breadcrumbList } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "OtO Lawn Care | BraneBridge Case Study",
   description:
     "Two GCP cost optimization case studies from OtO Lawn Care: ~$525K/yr saved on spiky SaaS/IoT workloads and ~$84K/yr saved on analytics/BI, from Series B through acquisition.",
+  alternates: { canonical: "/case-studies/oto" },
+  openGraph: {
+    title: "OtO Lawn Care | BraneBridge Case Study",
+    description:
+      "~$609K/yr cut from a GCP bill across two engagements — Series B through acquisition.",
+    type: "article",
+    url: "/case-studies/oto",
+  },
 };
 
 export default function OtoCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Case Studies", path: "/case-studies" },
+          { name: "OtO Lawn Care", path: "/case-studies/oto" },
+        ])}
+      />
       <div className="max-w-5xl mx-auto">
         <Link
           href="/case-studies"

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Blog | BraneBridge",
   description:
     "Technical writing from BraneBridge on GCP cost optimization, cloud engineering, and building production systems on Google Cloud.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function Blog() {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Cost leak report | BraneBridge",
   description:
     "Send us your GCP billing export and we'll return a one-page cost leak report within 48 hours.",
+  alternates: { canonical: "/cost-report" },
 };
 
 export default function CostReportPage() {

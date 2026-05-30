@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Docs | BraneBridge",
   description:
     "Documentation for working with BraneBridge — guides for GCP cost optimization and cloud engineering.",
+  alternates: { canonical: "/docs" },
 };
 
 export default function DocsHome() {

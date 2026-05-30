@@ -1,17 +1,32 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { CaseStudyCTA } from "@/components/case-study-cta";
+import { JsonLd, breadcrumbList } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gabzebo | BraneBridge Case Study",
   description:
     "BraneBridge built the device application, media processing pipelines, and a WYSIWYG editor for interactive presentations for Gabzebo (gabzebo.com), an interactive video booth media company. Software that helped secure $200K+ in new business, deployed on GCP.",
+  alternates: { canonical: "/case-studies/gabzebo" },
+  openGraph: {
+    title: "Gabzebo | BraneBridge Case Study",
+    description:
+      "Device application, media pipelines, and a WYSIWYG editor — software that helped close $200K+ in new business, deployed on GCP.",
+    type: "article",
+    url: "/case-studies/gabzebo",
+  },
 };
 
 export default function GabzeboCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Case Studies", path: "/case-studies" },
+          { name: "Gabzebo", path: "/case-studies/gabzebo" },
+        ])}
+      />
       <div className="max-w-5xl mx-auto">
         <Link
           href="/case-studies"

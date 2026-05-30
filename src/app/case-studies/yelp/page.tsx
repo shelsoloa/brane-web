@@ -1,17 +1,32 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { CaseStudyCTA } from "@/components/case-study-cta";
+import { JsonLd, breadcrumbList } from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Yelp | BraneBridge Case Study",
   description:
     "BraneBridge's team includes engineers who led the development of Yelp Guest Manager — project scoping, API development, and coordinating a team of 15+ engineers.",
+  alternates: { canonical: "/case-studies/yelp" },
+  openGraph: {
+    title: "Yelp | BraneBridge Case Study",
+    description:
+      "Engineers who led development of Yelp Guest Manager — the same people doing your cost reviews and builds.",
+    type: "article",
+    url: "/case-studies/yelp",
+  },
 };
 
 export default function YelpCaseStudy() {
   return (
     <section className="px-6 py-16 sm:py-24 bg-white">
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Case Studies", path: "/case-studies" },
+          { name: "Yelp", path: "/case-studies/yelp" },
+        ])}
+      />
       <div className="max-w-5xl mx-auto">
         <Link
           href="/case-studies"
