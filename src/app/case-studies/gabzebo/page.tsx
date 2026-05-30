@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import { CaseStudyCTA } from "@/components/case-study-cta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function GabzeboCaseStudy() {
           Gabzebo
         </h1>
         <p className="mt-4 text-primary font-semibold text-lg">
-          $200K+ in new business engagements
+          Software that closed $200K+ in new business
         </p>
 
         <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
@@ -44,8 +45,10 @@ export default function GabzeboCaseStudy() {
             over $200K in new business engagements.
           </p>
           <p>
-            We also rebuilt their database and telemetry, migrating from SQLite
-            to PostgreSQL. The system was deployed on GCP.
+            We also took over the parts that were starting to break under
+            growth &mdash; rebuilding the database from SQLite to PostgreSQL on
+            GCP and adding telemetry so the device fleet was actually
+            observable.
           </p>
         </div>
 
@@ -85,6 +88,8 @@ export default function GabzeboCaseStudy() {
         <p className="mt-8 text-sm text-muted-foreground max-w-3xl">
           Architecture and stack notes available on request.
         </p>
+
+        <CaseStudyCTA variant="build" />
       </div>
     </section>
   );

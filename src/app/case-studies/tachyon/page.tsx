@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import { CaseStudyCTA } from "@/components/case-study-cta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -47,15 +48,16 @@ export default function TachyonCaseStudy() {
               tachyonb2b.com
             </a>
             ) &mdash; an edtech matching service that connects accredited
-            academic professionals with researchers seeking assistance. It pairs
-            the right expert to each research request and uses an AI evaluation
-            tool to assess fit before a match is made.
+            academic professionals with researchers seeking assistance. Matching
+            researchers to the right expert by hand doesn&apos;t scale; Ex&sup2;
+            automates the fit assessment so a match is only made when the expert
+            actually fits the request.
           </p>
           <p>
             BraneBridge developed the MVP, deployed it, and provided critical
             infrastructure management throughout the engagement &mdash; product,
-            frontend, backend, AI evaluation, and operations. The work was
-            delivered in 2026.
+            frontend, backend, evaluation, and operations. The work was delivered
+            in 2026.
           </p>
         </div>
 
@@ -98,6 +100,8 @@ export default function TachyonCaseStudy() {
         <p className="mt-8 text-sm text-muted-foreground max-w-3xl">
           Architecture and stack notes available on request.
         </p>
+
+        <CaseStudyCTA variant="build" />
       </div>
     </section>
   );

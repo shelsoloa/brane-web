@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import { CaseStudyCTA } from "@/components/case-study-cta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,7 +29,8 @@ export default function OtoCaseStudy() {
 
         <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
           <p>
-            OtO (
+            A connected-hardware company with a device fleet doubling in the
+            field has a cloud bill that grows with every unit &mdash; fast. OtO (
             <a
               href="https://otolawn.com"
               target="_blank"
@@ -39,15 +41,15 @@ export default function OtoCaseStudy() {
             </a>
             ) builds a smart, self-installing sprinkler that connects to a
             garden hose and Wi-Fi to automate residential watering &mdash; a
-            connected hardware product with a companion app, a fleet of devices
-            in the field, and the telemetry that comes with both. The company is
-            a two-time CES Innovation Award winner.
+            companion app, a fleet of devices in the field, and the telemetry
+            that comes with both. The company is a two-time CES Innovation Award
+            winner.
           </p>
           <p>
             Sheldon Soloa, BraneBridge&apos;s founder, was a lead software
-            engineers at OtO from Series B through the company&apos;s
-            acquisition, owning the cloud infrastructure and optimizing more
-            than $1.6M in cumulative cloud spend across the engagement.
+            engineer at OtO from Series B through the company&apos;s
+            acquisition, owning the cloud infrastructure and bringing more than
+            $1.6M in cumulative cloud spend under control while the fleet grew.
           </p>
         </div>
 
@@ -138,6 +140,15 @@ export default function OtoCaseStudy() {
             </CardContent>
           </Card>
         </div>
+
+        <p className="mt-10 text-lg text-[#111111] leading-[1.7] max-w-3xl">
+          For a venture-backed company, a $609K/yr cut is months of runway you
+          didn&apos;t have to raise for &mdash; and it didn&apos;t require hiring
+          a dedicated cloud engineer to get it. BraneBridge runs the same review
+          on any GCP account.
+        </p>
+
+        <CaseStudyCTA variant="cost" />
       </div>
     </section>
   );

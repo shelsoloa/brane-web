@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import { CaseStudyCTA } from "@/components/case-study-cta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function PromoExchangeCaseStudy() {
           PromoExchange
         </h1>
         <p className="mt-4 text-primary font-semibold text-lg">
-          Founder &amp; sole engineer
+          A full payments marketplace, designed and shipped by one engineer
         </p>
 
         <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
@@ -92,6 +93,8 @@ export default function PromoExchangeCaseStudy() {
           Stack details reflect the public product. Architecture notes available
           on request.
         </p>
+
+        <CaseStudyCTA variant="build" />
       </div>
     </section>
   );
