@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function YelpCaseStudy() {
   return (
-    <section className="px-6 py-16 sm:py-24 bg-white">
+    <section className="px-6 py-16 sm:py-24">
       <JsonLd
         data={breadcrumbList([
           { name: "Case Studies", path: "/case-studies" },
@@ -75,13 +75,9 @@ export default function YelpCaseStudy() {
             <CardContent className="py-7">
               <p className="font-semibold text-[#0a0a0a]">The role</p>
               <ul className="mt-3 space-y-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
-                <li>
-                  Scoped the project and defined the technical direction
-                </li>
+                <li>Scoped the project and defined the technical direction</li>
                 <li>Led API development for the product</li>
-                <li>
-                  Coordinated a team of 15+ engineers through delivery
-                </li>
+                <li>Coordinated a team of 15+ engineers through delivery</li>
               </ul>
             </CardContent>
           </Card>
@@ -94,9 +90,7 @@ export default function YelpCaseStudy() {
                   Yelp Guest Manager &mdash; front-of-house management for
                   restaurants
                 </li>
-                <li>
-                  Waitlist, reservation, and seating workflows at scale
-                </li>
+                <li>Waitlist, reservation, and seating workflows at scale</li>
                 <li>Built and operated within Yelp&apos;s engineering org</li>
               </ul>
             </CardContent>

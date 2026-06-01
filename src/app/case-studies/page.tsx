@@ -60,7 +60,7 @@ function StaticItem({
 
 export default function CaseStudies() {
   return (
-    <section className="px-6 py-20 sm:py-28 bg-white">
+    <section className="px-6 py-20 sm:py-28">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#111111] leading-[1.05]">
           Case Studies

@@ -25,7 +25,7 @@ export function Topbar() {
           <BraneBridgeLogo width={180} height={45} />
         </Link>
 
-        <NavigationMenu className="text-black">
+        <NavigationMenu className="text-scheme-primary-fg">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Resources</NavigationMenuTrigger>

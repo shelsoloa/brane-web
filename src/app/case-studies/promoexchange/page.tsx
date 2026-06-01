@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function PromoExchangeCaseStudy() {
   return (
-    <section className="px-6 py-16 sm:py-24 bg-white">
+    <section className="px-6 py-16 sm:py-24">
       <JsonLd
         data={breadcrumbList([
           { name: "Case Studies", path: "/case-studies" },

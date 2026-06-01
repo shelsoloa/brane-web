@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function GabzeboCaseStudy() {
   return (
-    <section className="px-6 py-16 sm:py-24 bg-white">
+    <section className="px-6 py-16 sm:py-24">
       <JsonLd
         data={breadcrumbList([
           { name: "Case Studies", path: "/case-studies" },
@@ -60,10 +60,9 @@ export default function GabzeboCaseStudy() {
             over $200K in new business engagements.
           </p>
           <p>
-            We also took over the parts that were starting to break under
-            growth &mdash; rebuilding the database from SQLite to PostgreSQL on
-            GCP and adding telemetry so the device fleet was actually
-            observable.
+            We also took over the parts that were starting to break under growth
+            &mdash; rebuilding the database from SQLite to PostgreSQL on GCP and
+            adding telemetry so the device fleet was actually observable.
           </p>
         </div>
 
@@ -72,11 +71,11 @@ export default function GabzeboCaseStudy() {
             <CardContent className="py-7">
               <p className="font-semibold text-[#0a0a0a]">What we built</p>
               <ul className="mt-3 space-y-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
-                <li>Device application running on the interactive video booths</li>
-                <li>Media processing pipelines for captured video</li>
                 <li>
-                  WYSIWYG editor for building interactive presentations
+                  Device application running on the interactive video booths
                 </li>
+                <li>Media processing pipelines for captured video</li>
+                <li>WYSIWYG editor for building interactive presentations</li>
                 <li>Rebuilt database and telemetry</li>
               </ul>
             </CardContent>
@@ -88,13 +87,9 @@ export default function GabzeboCaseStudy() {
                 How it&apos;s built
               </p>
               <ul className="mt-3 space-y-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
-                <li>
-                  Database migrated from SQLite to PostgreSQL
-                </li>
+                <li>Database migrated from SQLite to PostgreSQL</li>
                 <li>Deployed and operated on GCP</li>
-                <li>
-                  Telemetry rebuilt for visibility into the device fleet
-                </li>
+                <li>Telemetry rebuilt for visibility into the device fleet</li>
               </ul>
             </CardContent>
           </Card>

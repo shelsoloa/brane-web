@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function TachyonCaseStudy() {
   return (
-    <section className="px-6 py-16 sm:py-24 bg-white">
+    <section className="px-6 py-16 sm:py-24">
       <JsonLd
         data={breadcrumbList([
           { name: "Case Studies", path: "/case-studies" },
@@ -71,8 +71,8 @@ export default function TachyonCaseStudy() {
           <p>
             BraneBridge developed the MVP, deployed it, and provided critical
             infrastructure management throughout the engagement &mdash; product,
-            frontend, backend, evaluation, and operations. The work was delivered
-            in 2026.
+            frontend, backend, evaluation, and operations. The work was
+            delivered in 2026.
           </p>
         </div>
 
@@ -100,9 +100,7 @@ export default function TachyonCaseStudy() {
             <CardContent className="py-7">
               <p className="font-semibold text-[#0a0a0a]">What we delivered</p>
               <ul className="mt-3 space-y-2 text-[#1a1a1a] leading-[1.7] list-disc pl-5 marker:text-primary">
-                <li>
-                  MVP designed and built from first commit to production
-                </li>
+                <li>MVP designed and built from first commit to production</li>
                 <li>Deployed and operated the full stack in production</li>
                 <li>
                   Critical infrastructure management across the engagement

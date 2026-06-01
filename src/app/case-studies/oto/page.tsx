@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function OtoCaseStudy() {
   return (
-    <section className="px-6 py-16 sm:py-24 bg-white">
+    <section className="px-6 py-16 sm:py-24">
       <JsonLd
         data={breadcrumbList([
           { name: "Case Studies", path: "/case-studies" },
@@ -45,7 +45,8 @@ export default function OtoCaseStudy() {
         <div className="mt-8 space-y-5 text-lg text-[#111111] leading-[1.7] max-w-3xl">
           <p>
             A connected-hardware company with a device fleet doubling in the
-            field has a cloud bill that grows with every unit &mdash; fast. OtO (
+            field has a cloud bill that grows with every unit &mdash; fast. OtO
+            (
             <a
               href="https://otolawn.com"
               target="_blank"
@@ -158,9 +159,9 @@ export default function OtoCaseStudy() {
 
         <p className="mt-10 text-lg text-[#111111] leading-[1.7] max-w-3xl">
           For a venture-backed company, a $609K/yr cut is months of runway you
-          didn&apos;t have to raise for &mdash; and it didn&apos;t require hiring
-          a dedicated cloud engineer to get it. BraneBridge runs the same review
-          on any GCP account.
+          didn&apos;t have to raise for &mdash; and it didn&apos;t require
+          hiring a dedicated cloud engineer to get it. BraneBridge runs the same
+          review on any GCP account.
         </p>
 
         <CaseStudyCTA variant="cost" />

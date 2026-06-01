@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#111827] text-[#d1d5db] px-6 py-12">
+    <footer className="bg-scheme-alt-bg text-scheme-alt-fg px-6 py-12">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between gap-8">
           <div>
@@ -38,20 +38,20 @@ export function Footer() {
 
         <hr className="my-8 border-white/10" />
 
-        <p className="text-sm text-[#9ca3af]">
+        <p className="text-sm text-scheme-alt-fg-muted">
           BraneBridge is an independent organization. Not affiliated with Google
           Cloud.
         </p>
 
         <div className="mt-6 flex items-center justify-between">
-          <p className="text-sm text-[#9ca3af]">
+          <p className="text-sm text-scheme-alt-fg-muted">
             &copy; 2026 BraneBridge. Toronto, ON, Canada.
           </p>
           <a
             href="https://www.linkedin.com/company/branebridge"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#9ca3af] hover:text-white transition-colors"
+            className="text-scheme-alt-fg-muted hover:text-scheme-alt-fg transition-colors"
             aria-label="BraneBridge on LinkedIn"
           >
             <Linkedin className="w-5 h-5" />

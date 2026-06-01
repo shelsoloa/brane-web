@@ -14,7 +14,7 @@ export default function Blog() {
   const posts = getAllPosts();
 
   return (
-    <section className="px-6 py-20 sm:py-28 bg-white">
+    <section className="px-6 py-20 sm:py-28">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#111111] leading-[1.05]">
           Blog
@@ -40,7 +40,7 @@ export default function Blog() {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
-                      }
+                      },
                     )}
                   </p>
                   <p className="mt-2 text-lg font-bold text-[#0a0a0a] group-hover:text-primary transition-colors">
