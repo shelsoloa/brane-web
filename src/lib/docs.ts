@@ -2,7 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import html from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
 
 export interface DocMeta {
   title: string;
@@ -39,7 +41,11 @@ export async function getDocBySlug(slug: string): Promise<Doc | null> {
     const raw = fs.readFileSync(path.join(contentDir, filename), "utf-8");
     const { data, content } = matter(raw);
     if (data.slug === slug) {
-      const result = await remark().use(html).process(content);
+      const result = await remark()
+        .use(remarkRehype)
+        .use(rehypeHighlight)
+        .use(rehypeStringify)
+        .process(content);
       return { ...normalizeMeta(data), contentHtml: result.toString() };
     }
   }

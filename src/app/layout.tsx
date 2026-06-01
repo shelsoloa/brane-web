@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import "highlight.js/styles/github.css";
 import { Topbar } from "@/components/topbar";
 import { Footer } from "@/components/footer";
 import { Inter, Oxanium } from "next/font/google";

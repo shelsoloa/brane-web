@@ -144,3 +144,17 @@
     text-wrap: balance;
   }
 }
+
+.prose :not(pre) > code {
+  color: var(--primary);
+  background-color: oklch(0.96 0.01 165);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}
