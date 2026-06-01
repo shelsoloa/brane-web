@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAllDocs } from "@/lib/docs";
 
 export const metadata: Metadata = {
   title: "Docs | BraneBridge",
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function DocsHome() {
+  const docs = getAllDocs();
+
   return (
     <article>
       <h1 className="text-4xl font-bold tracking-tight text-[#111111]">Docs</h1>
@@ -19,18 +22,17 @@ export default function DocsHome() {
 
       <h2 className="mt-12 text-2xl font-semibold text-[#111111]">Guides</h2>
       <ul className="mt-4 space-y-3">
-        <li>
-          <Link
-            href="/docs/how-to-pull-gcp-billing-export"
-            className="text-primary hover:underline"
-          >
-            How to pull a GCP Billing Export
-          </Link>
-          <p className="text-[#374151]">
-            Enable detailed billing export to BigQuery so we can analyze your
-            spend down to the SKU.
-          </p>
-        </li>
+        {docs.map((doc) => (
+          <li key={doc.slug}>
+            <Link
+              href={`/docs/${doc.slug}`}
+              className="text-primary hover:underline"
+            >
+              {doc.title}
+            </Link>
+            <p className="text-[#374151]">{doc.description}</p>
+          </li>
+        ))}
       </ul>
     </article>
   );

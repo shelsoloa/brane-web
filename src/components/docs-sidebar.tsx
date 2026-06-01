@@ -14,15 +14,12 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-const docsPages = [
-  { title: "Overview", href: "/docs" },
-  {
-    title: "How to pull a GCP Billing Export",
-    href: "/docs/how-to-pull-gcp-billing-export",
-  },
-];
+interface DocsPage {
+  title: string;
+  href: string;
+}
 
-export function DocsSidebar() {
+export function DocsSidebar({ pages }: { pages: DocsPage[] }) {
   const pathname = usePathname();
 
   return (
@@ -35,7 +32,7 @@ export function DocsSidebar() {
           <SidebarGroupLabel>Docs</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {docsPages.map((page) => (
+              {pages.map((page) => (
                 <SidebarMenuItem key={page.href}>
                   <SidebarMenuButton asChild isActive={pathname === page.href}>
                     <Link href={page.href}>{page.title}</Link>

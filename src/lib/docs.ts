@@ -4,43 +4,36 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-export interface PostMeta {
+export interface DocMeta {
   title: string;
-  date: string;
   slug: string;
-  author: string;
   description: string;
 }
 
-export interface Post extends PostMeta {
+export interface Doc extends DocMeta {
   contentHtml: string;
 }
 
-const contentDir = path.join(process.cwd(), "src/content/blog");
+const contentDir = path.join(process.cwd(), "src/content/docs");
 
-function normalizeMeta(data: Record<string, unknown>): PostMeta {
-  const date =
-    data.date instanceof Date
-      ? data.date.toISOString().slice(0, 10)
-      : String(data.date);
-  return { ...(data as unknown as PostMeta), date };
+function normalizeMeta(data: Record<string, unknown>): DocMeta {
+  return data as unknown as DocMeta;
 }
 
-export function getAllPosts(): PostMeta[] {
+export function getAllDocs(): DocMeta[] {
   const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md"));
-  const posts = files.map((filename) => {
+  return files.map((filename) => {
     const raw = fs.readFileSync(path.join(contentDir, filename), "utf-8");
     const { data } = matter(raw);
     return normalizeMeta(data);
   });
-  return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
 }
 
-export function getAllSlugs(): string[] {
-  return getAllPosts().map((p) => p.slug);
+export function getAllDocSlugs(): string[] {
+  return getAllDocs().map((d) => d.slug);
 }
 
-export async function getPostBySlug(slug: string): Promise<Post | null> {
+export async function getDocBySlug(slug: string): Promise<Doc | null> {
   const files = fs.readdirSync(contentDir).filter((f) => f.endsWith(".md"));
   for (const filename of files) {
     const raw = fs.readFileSync(path.join(contentDir, filename), "utf-8");
