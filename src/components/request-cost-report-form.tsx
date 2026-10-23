@@ -156,7 +156,7 @@ export function RequestCostLeakReportForm() {
         <p className="text-sm text-[#6b7280]">
           Prefer to talk first?{" "}
           <a
-            href="https://cal.com/branebridge/intro"
+            href="https://cal.com/shelsoloa"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline"

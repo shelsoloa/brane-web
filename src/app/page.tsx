@@ -12,7 +12,7 @@ import { Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { JsonLd, ORGANIZATION_ID } from "@/components/json-ld";
 
-const BOOKING_URL = "https://cal.com/branebridge/intro";
+const BOOKING_URL = "https://cal.com/shelsoloa";
 const COST_REPORT_URL = "/cost-report";
 const ENGINEERING_MAILTO =
   "mailto:contact@branebridge.com?subject=Engineering%20engagement";

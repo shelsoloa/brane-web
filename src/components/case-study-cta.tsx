@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const BOOKING_URL = "https://cal.com/branebridge/intro";
+const BOOKING_URL = "https://cal.com/shelsoloa";
 const COST_REPORT_URL = "/cost-report";
 const ENGINEERING_MAILTO =
   "mailto:contact@branebridge.com?subject=Engineering%20engagement";
